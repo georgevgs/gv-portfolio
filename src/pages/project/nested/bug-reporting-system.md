@@ -3,7 +3,7 @@ layout: ../../../layouts/project.astro
 title: Bug Reporting System
 client: Project Future
 publishDate: 2019-06-05 10:00:00
-img: /assets/bug-reporting-system.jpg
+img: /assets/bug-reporting-system.webp
 description: |
   A a bug and issue tracking tool
 tags:
