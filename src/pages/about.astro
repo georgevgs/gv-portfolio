@@ -57,12 +57,22 @@ import Nav from "../components/Nav.astro";
 
 			.flex-container {
 				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+			}
+
+			/* Responsive layout - makes a one column layout instead of a two-column layout */
+			@media (max-width: 800px) {
+			.flex-container {
+				flex-direction: column;
+			}
 			}
 			.flex-child {
 				flex: 2 1 auto;
 			}  
 			/* .flex-child:first-child {
 				flex: 1;
+				
 			}  */
 		</style>
 	</head>
@@ -78,7 +88,7 @@ import Nav from "../components/Nav.astro";
 			</div>
 			<div class="flex-container">
 				<div class="flex-child sticker">
-					<img alt="gv-dev-sticker" width="400" height="400" src="/assets/gv-dev-sticker.webp" />
+					<img alt="gv-dev-sticker"  src="/assets/gv-dev-sticker.webp" />
 				</div>
 				<div class="flex-child bio wrapper">
 					<p>
@@ -86,8 +96,8 @@ import Nav from "../components/Nav.astro";
 						Frontend and Backend. That's what people call Fullstack
 						developer!
 						<br />
-						📅 My interest in web development started back in 2013 (I was still in Highschool), when I created my first tech news website (tech4greece.gr).
-						I've been making websites for about <span id="years"></span> years - or <span id="timer"></span> milliseconds!
+						📅 My interest in web development started back in 2013 (I was still in High School), when I created my first tech news website (tech4greece.gr).
+						<br>I've been making websites for about <span id="years"></span> years - or <span id="timer"></span> milliseconds!
 					</p>
 					<h2>Technologies:</h2>
 					<ul class="skills-list">
