@@ -1,135 +1,161 @@
 ---
-import Toggle from './ThemeChange.astro';
+import Toggle from "./ThemeChange.astro";
 ---
 
 <nav>
-	<a class="link" href="/">
-		<div class="monogram">GV</div>
-	</a>
-	<a class="link" href="/projects/"> Portfolio</a>
-	<a class="link" href="/about/"> About</a>
-	<div class="socials">
-		<a class="social" href="https://linkedin.com/in/gvagdas" target="_blank">
-			<svg class="socialIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-				<path 
-					d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
-				</path>
-			</svg>
-		</a>
-		<a class="social" href="https://github.com/georgevgs" target="_blank">
-			<svg class="socialIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-				<path
-					d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z">
-				</path>
-			</svg>
-		</a>
-		<a class="social" href="mailto:dev@vagdas.eu" rel="noopener noreferrer" target="_blank">
-			<svg class="socialIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="1 1 600 600">
-				<g transform="matrix(6.66667 0 0 6.66667 -5.667 -6408.081)">
-					<path d="M21.653 961.362h48.695a20.608 20.608 0 0 1 20.653 20.653v48.695a20.608 20.608 0 0 1-20.653 20.653H21.653A20.608 20.608 0 0 1 1 1030.71v-48.695a20.608 20.608 0 0 1 20.653-20.653z"/>
-					<path d="M20.719 986.956c-.474 0-.921.082-1.344.25l8.469 8.719 8.563 8.875.156.188.25.25.25.25.5.531 7.344 7.531c.122.076.477.404.754.543.357.178.743.343 1.141.357.43.015.869-.108 1.256-.296.29-.141.419-.343.755-.603l8.5-8.781 8.594-8.844 8.281-8.531a3.635 3.635 0 0 0-1.75-.438H20.719zm-2.594 1.062c-.903.856-1.469 2.142-1.469 3.594v28.625c0 1.175.377 2.243 1 3.062l1.187-1.125 8.844-8.594 7.844-7.594-.156-.187-8.594-8.844-8.594-8.875-.062-.062zm57.188.282l-8.375 8.656-8.563 8.844-.156.156 8.156 7.906 8.844 8.594.531.5c.476-.764.75-1.705.75-2.719v-28.625c0-1.294-.448-2.468-1.187-3.312zm-38.782 18.718l-7.812 7.594-8.875 8.594-1.125 1.094c.593.382 1.268.625 2 .625h51.719c.88 0 1.678-.338 2.344-.875l-.562-.562-8.875-8.594-8.156-7.875-7.344 7.562c-.397.264-.663.556-1.051.735-.625.289-1.309.533-1.997.523-.69-.011-1.367-.281-1.986-.585-.311-.153-.477-.305-.841-.61l-7.439-7.626z" fill="#fff"/>
-				</g>
-			</svg>
-		</a>
-	</div>
-	<Toggle />
+  <a class="link" href="/">
+    <div class="monogram">GV</div>
+  </a>
+  <a class="link" href="/projects/"> Portfolio</a>
+  <a class="link" href="/about/"> About</a>
+  <div class="socials">
+    <a class="social" href="https://linkedin.com/in/gvagdas" target="_blank">
+      <svg
+        class="socialIcon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+        >
+        </path>
+      </svg>
+    </a>
+    <a class="social" href="https://github.com/georgevgs" target="_blank">
+      <svg
+        class="socialIcon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+        >
+        </path>
+      </svg>
+    </a>
+    <a
+      class="social"
+      href="mailto:dev@vagdas.eu"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <svg
+        class="socialIcon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="1 1 600 600"
+      >
+        <g transform="matrix(6.66667 0 0 6.66667 -5.667 -6408.081)">
+          <path
+            d="M21.653 961.362h48.695a20.608 20.608 0 0 1 20.653 20.653v48.695a20.608 20.608 0 0 1-20.653 20.653H21.653A20.608 20.608 0 0 1 1 1030.71v-48.695a20.608 20.608 0 0 1 20.653-20.653z"
+          ></path>
+          <path
+            d="M20.719 986.956c-.474 0-.921.082-1.344.25l8.469 8.719 8.563 8.875.156.188.25.25.25.25.5.531 7.344 7.531c.122.076.477.404.754.543.357.178.743.343 1.141.357.43.015.869-.108 1.256-.296.29-.141.419-.343.755-.603l8.5-8.781 8.594-8.844 8.281-8.531a3.635 3.635 0 0 0-1.75-.438H20.719zm-2.594 1.062c-.903.856-1.469 2.142-1.469 3.594v28.625c0 1.175.377 2.243 1 3.062l1.187-1.125 8.844-8.594 7.844-7.594-.156-.187-8.594-8.844-8.594-8.875-.062-.062zm57.188.282l-8.375 8.656-8.563 8.844-.156.156 8.156 7.906 8.844 8.594.531.5c.476-.764.75-1.705.75-2.719v-28.625c0-1.294-.448-2.468-1.187-3.312zm-38.782 18.718l-7.812 7.594-8.875 8.594-1.125 1.094c.593.382 1.268.625 2 .625h51.719c.88 0 1.678-.338 2.344-.875l-.562-.562-8.875-8.594-8.156-7.875-7.344 7.562c-.397.264-.663.556-1.051.735-.625.289-1.309.533-1.997.523-.69-.011-1.367-.281-1.986-.585-.311-.153-.477-.305-.841-.61l-7.439-7.626z"
+            fill="#fff"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+  <Toggle />
 </nav>
 
 <style>
-	nav {
-		display: flex;
-		gap: 1rem;
-		align-items: center;
-		padding: 1rem;
-		justify-content: space-between;
-		position: -webkit-sticky;
-		position: sticky;
-		top: 0;
-		z-index: 99;
-		background-color: var(--color-bg);
-	}
+  nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: var(--color-bg);
+  }
 
-	.link {
-		color: var(--t-subdue);
-		display: block;
-		text-decoration: none;
-		font-size: var(--f-d1);
-		text-transform: uppercase;
-		padding-top: 0.75em;
-		padding-bottom: 0.75em;
-	}
+  .link {
+    color: var(--t-subdue);
+    display: block;
+    text-decoration: none;
+    font-size: var(--f-d1);
+    text-transform: uppercase;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+  }
 
-	.link:hover,
-	.link:focus {
-		color: var(--c-orange);
-	}
+  .link:hover,
+  .link:focus {
+    color: var(--c-orange);
+  }
 
-	.monogram {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 2em;
-		height: 2em;
-		margin-right: 0.5rem;
-		color: var(--c-black);
-		font-weight: 900;
-		letter-spacing: -0.125rem;
-		border: 3px solid currentColor;
-		border-radius: 50%;
-	}
+  .monogram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    margin-right: 0.5rem;
+    color: var(--c-black);
+    font-weight: 900;
+    letter-spacing: -0.125rem;
+    border: 3px solid currentColor;
+    border-radius: 50%;
+  }
 
-	.socials {
-		display: flex;
-		gap: 0.75em;
-		margin-left: auto;
-	}
+  .socials {
+    display: flex;
+    gap: 0.75em;
+    margin-left: auto;
+  }
 
-	.social {
-		display: block;
-	}
+  .social {
+    display: block;
+  }
 
-	.socialIcon {
-		display: block;
-		width: 1.25rem;
-		height: 1.25rem;
-		fill: var(--t-subdue);
-		transition: fill linear 150ms;
-	}
+  .socialIcon {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: var(--t-subdue);
+    transition: fill linear 150ms;
+  }
 
-	.socialIcon:hover {
-		fill: var(--c-orange);
-	}
+  .socialIcon:hover {
+    fill: var(--c-orange);
+  }
 </style>
 <script>
-    // Get the theme toggle input
-    const themeToggle = document.querySelector('.theme-switch input[type="checkbox"]') as HTMLInputElement;
+  // Get the theme toggle input
+  const themeToggle = document.querySelector(
+    '.theme-switch input[type="checkbox"]'
+  ) as HTMLInputElement;
 
-    // Get the current theme from local storage
-    const currentTheme = localStorage.getItem("theme");
+  // Get the current theme from local storage
+  const currentTheme = localStorage.getItem("theme");
 
-    // If the current local storage item can be found
-    if (currentTheme) {
-      // Set the body data-theme attribute to match the local storage item
-      document.documentElement.setAttribute("data-theme", currentTheme);
+  // If the current local storage item can be found
+  if (currentTheme) {
+    // Set the body data-theme attribute to match the local storage item
+    document.documentElement.setAttribute("data-theme", currentTheme);
 
-      // If the current theme is dark, check the theme toggle
-      if (currentTheme === "dark") {
-        themeToggle.checked = true;
-      }
+    // If the current theme is dark, check the theme toggle
+    if (currentTheme === "dark") {
+      themeToggle.checked = true;
     }
+  }
 
-    // Function that will switch the theme based on the if the theme toggle is checked or not
-    function switchTheme(e: any) {
-      if (e.target.checked) {
-        document.documentElement.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark");
-      } else {
-        document.documentElement.setAttribute("data-theme", "light");
-        localStorage.setItem("theme", "light");
-      }
+  // Function that will switch the theme based on the if the theme toggle is checked or not
+  function switchTheme(e: any) {
+    if (e.target.checked) {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
     }
+  }
 
-    // Add an event listener to the theme toggle, which will switch the theme
-    themeToggle.addEventListener("change", switchTheme, false);
-
+  // Add an event listener to the theme toggle, which will switch the theme
+  themeToggle.addEventListener("change", switchTheme, false);
 </script>

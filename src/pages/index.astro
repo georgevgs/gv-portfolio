@@ -15,309 +15,340 @@ const featuredProject = projects[0]!;
 ---
 
 <html lang="en">
-	<head>
-		<MainHead
-			title="George Vagdas: Personal Site"
-			description="George Vagdas: Web Developer..."
-		/>
-		<style>
-			.wrapper {
-				margin-top: 2em;
-				margin-bottom: 2em;
-			}
+  <head>
+    <MainHead
+      title="George Vagdas: Personal Site"
+      description="George Vagdas: Web Developer..."
+    />
+    <style>
+      .wrapper {
+        margin-top: 2em;
+        margin-bottom: 2em;
+      }
 
-			.hero {
-				position: relative;
-				overflow: hidden;
-			}
+      .hero {
+        position: relative;
+        overflow: hidden;
+      }
 
-			@media (min-width: 750px) {
-				.hero {
-					height: 45vw;
-				}
-			}
+      @media (min-width: 750px) {
+        .hero {
+          height: 45vw;
+        }
+      }
 
-			.img {
-				display: block;
-				width: 100%;
-				height: auto;
-			}
+      .img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
 
-			.gradient,
-			.gradient2 {
-				background-image: url("/assets/mesh-gradient-orange.webp");
-				background-size: cover;
-				pointer-events: none;
-				mix-blend-mode: screen;
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: 2;
-			}
+      .gradient,
+      .gradient2 {
+        background-image: url("/assets/mesh-gradient-orange.webp");
+        background-size: cover;
+        pointer-events: none;
+        mix-blend-mode: screen;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
 
-			.gradient2 {
-				mix-blend-mode: multiply;
-				background-size: cover;
-			}
+      .gradient2 {
+        mix-blend-mode: multiply;
+        background-size: cover;
+      }
 
-			.overlay {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				z-index: 10;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				padding-left: 2rem;
-			}
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 2rem;
+      }
 
-			@media (min-width: 750px) {
-				.overlay {
-					padding-left: 4rem;
-				}
-			}
+      @media (min-width: 750px) {
+        .overlay {
+          padding-left: 4rem;
+        }
+      }
 
-			.title {
-				font-weight: 900;
-				font-size: var(--f-u6);
-				margin-bottom: 0.5rem;
-				margin-top: 0;
-			}
+      .title {
+        font-weight: 900;
+        font-size: var(--f-u6);
+        margin-bottom: 0.5rem;
+        margin-top: 0;
+      }
 
-			@media (min-width: 750px) {
-				.title {
-					font-size: var(--f-u12);
-				}
-			}
+      @media (min-width: 750px) {
+        .title {
+          font-size: var(--f-u12);
+        }
+      }
 
-			.grid {
-				display: grid;
-				grid-gap: 2rem;
-			}
+      .grid {
+        display: grid;
+        grid-gap: 2rem;
+      }
 
-			@media (min-width: 1200px) {
-				.grid {
-					grid-template-columns: 2fr 1fr;
-				}
-			}
+      @media (min-width: 1200px) {
+        .grid {
+          grid-template-columns: 2fr 1fr;
+        }
+      }
 
-			.sectionTitle {
-				font-weight: 700;
-				font-size: var(--f-u8);
-				margin-top: 4rem;
-				margin-bottom: 2rem;
-			}
+      .sectionTitle {
+        font-weight: 700;
+        font-size: var(--f-u8);
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+      }
 
-			.roles {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 0.5em;
-				font-size: var(--f-d1);
-			}
+      .roles {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em;
+        font-size: var(--f-d1);
+      }
 
-			.role {
-				position: relative;
-				display: inline-block;
-				white-space: nowrap;
-				font-weight: 900;
-				color: var(--t-bg);
-				background-color: var(--t-fg);
-				padding: 0.25em 0.5em;
-				z-index: 2;
-			}
+      .role {
+        position: relative;
+        display: inline-block;
+        white-space: nowrap;
+        font-weight: 900;
+        color: var(--t-bg);
+        background-color: var(--t-fg);
+        padding: 0.25em 0.5em;
+        z-index: 2;
+      }
 
-			@media (min-width: 750px) {
-				.role {
-					font-size: var(--f-u3);
-				}
-			}
+      @media (min-width: 750px) {
+        .role {
+          font-size: var(--f-u3);
+        }
+      }
 
-			.role:nth-of-type(1) .invert {
-				background-color: var(--c-orange);
-			}
+      .role:nth-of-type(1) .invert {
+        background-color: var(--c-orange);
+      }
 
-			.role:nth-of-type(2) .invert {
-				background-color: var(--c-blue);
-			}
+      .role:nth-of-type(2) .invert {
+        background-color: var(--c-blue);
+      }
 
-			.role:nth-of-type(3) .invert {
-				background-color: var(--c-green);
-			}
+      .role:nth-of-type(3) .invert {
+        background-color: var(--c-green);
+      }
 
-			.role:hover .invert {
-				clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-			}
+      .role:hover .invert {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      }
 
-			.invert {
-				position: absolute;
-				color: var(--t-fg);
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				pointer-events: none;
-				clip-path: polygon(0% 100%, 100% 100%, 100% 200%, 0% 200%);
-				transition: clip-path cubic-bezier(0.4, 0, 0.5, 1) 150ms;
-			}
+      .invert {
+        position: absolute;
+        color: var(--t-fg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        clip-path: polygon(0% 100%, 100% 100%, 100% 200%, 0% 200%);
+        transition: clip-path cubic-bezier(0.4, 0, 0.5, 1) 150ms;
+      }
 
-			.desc {
-				font-size: var(--f-u1);
-				margin-top: 1.5rem;
-				margin-bottom: 0;
-			}
+      .desc {
+        font-size: var(--f-u1);
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+      }
 
-			.subtitle {
-				display: block;
-				font-weight: 400;
-				font-size: var(--f-d6);
-				letter-spacing: -0.0625em;
-			}
+      .subtitle {
+        display: block;
+        font-weight: 400;
+        font-size: var(--f-d6);
+        letter-spacing: -0.0625em;
+      }
 
-			.bio {
-				line-height: 2;
-				margin-bottom: 2rem;
-			}
+      .bio {
+        line-height: 2;
+        margin-bottom: 2rem;
+      }
 
-			.bio > span:first-of-type {
-				line-height: 1;
-				margin-bottom: 0.5em;
-				display: block;
-				font-weight: 700;
-				font-size: var(--f-u4);
-			}
+      .bio > span:first-of-type {
+        line-height: 1;
+        margin-bottom: 0.5em;
+        display: block;
+        font-weight: 700;
+        font-size: var(--f-u4);
+      }
 
-			.buttonContainer {
-				text-align: center;
-				margin-top: 2em;
-			}
-		</style>
-		<style lang="scss">
-			.rotate-text {
-				font: normal 2.5em/1.2 sans-serif;
-				height:1.2em;
-				width:100%;
-				position:relative;
-				overflow:hidden;
-				padding:0 0 .1em 0;
+      .buttonContainer {
+        text-align: center;
+        margin-top: 2em;
+      }
+    </style>
+    <style lang="scss">
+      .rotate-text {
+        font: normal 2.5em/1.2 sans-serif;
+        height: 1.2em;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        padding: 0 0 0.1em 0;
 
-				color: var(--c-orange);
-				font-weight: 900;
-				text-shadow: 0 0 2px #000; /* horizontal-offset vertical-offset 'blur' colour */
-				-moz-text-shadow: 0 0 2px #000;
-				-webkit-text-shadow: 0 0 2px #000;
-				> span {
-					float:left;
-					margin-right:.3em;
-					height:1.2em;
+        color: var(--c-orange);
+        font-weight: 900;
+        text-shadow: 0 0 2px #000; /* horizontal-offset vertical-offset 'blur' colour */
+        -moz-text-shadow: 0 0 2px #000;
+        -webkit-text-shadow: 0 0 2px #000;
+        > span {
+          float: left;
+          margin-right: 0.3em;
+          height: 1.2em;
 
-					&:first-of-type {
-						font-weight:800;
-						display:inline-block;
-						margin-bottom: 0.5rem;
-						margin-top: 0;
+          &:first-of-type {
+            font-weight: 800;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            margin-top: 0;
 
-						position: relative;
-						white-space: nowrap;
-						bottom: 0;
-						left: 0;
-						
-						animation: ticker 10s;
-						animation-iteration-count: infinite;
-						animation-delay: 7s;
-					}
-				}
-			}
+            position: relative;
+            white-space: nowrap;
+            bottom: 0;
+            left: 0;
 
-			@keyframes ticker {
-				0%  { bottom: 0; }
-				10% { bottom: 0; }
-				20% { bottom: 1.2em; }
-				30% { bottom: 1.2em; }
-				40% { bottom: 2.4em; }
-				50% { bottom: 2.4em; }
-				60% { bottom: 3.6em; }
-				70% { bottom: 3.6em; }
-			}
-		</style>
-	</head>
-	<body>
-		<Nav />
-		<header class="hero">
-			<img
-				alt="waves"
-				width="1600"
-				height="1131"
-				class="img"
-				src="/assets/waves.webp"
-				srcset="/assets/waves.webp 800w,/assets/waves.webp 1200w,/assets/waves.webp 1600w,/assets/waves.webp 2400w"
-				sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (max-width: 2400px) 2400px, 1200px"
-			/>
-			<div class="gradient"></div>
-			<div class="gradient2"></div>
-			<div class="overlay">
-				<h1 class="title">
-					<small class="rotate-text subtitle">
-						<span>
-							Hi :)<br>
-							Hallo :) <br>
-							Salut :)<br>
-							Hola :)
-						</span>
-					</small>
-					<small class="subtitle">This is the personal website of</small>
-					George Vagdas
-				</h1>
-				<div class="roles">
-					<span class="role">
-						<img alt="gv-dev-sticker" width="22" height="22" src="/assets/gv-dev-sticker.webp"/>Web Developer
-						<span class="invert">
-							<img alt="gv-dev-sticker" width="22" height="22" src="/assets/gv-dev-sticker.webp"/>Web Developer
-						</span>
-					</span>
-				</div>
-				<p class="desc">
-					Any app that can be written in JavaScript, will eventually
-					be written in JavaScript.
-				</p>
-			</div>
-		</header>
-		<main class="wrapper">
-			<div class="grid">
-				<div class="section">
-					<h3 class="sectionTitle">💻 Selected Work</h3>
-					<PortfolioPreview project={featuredProject} />
-					<div class="buttonContainer">
-						<a href="/projects/" class="button">View All</a>
-					</div>
-				</div>
-				<div class="section">
-					<h3 class="sectionTitle">
-						<img alt="gv-dev-sticker" width="50" height="50" src="/assets/gv-hi.webp"/>
-						Who am I
-					</h3>
-					<p class="bio">
-						Originally from Greece, I am currently based in Athens,
-						Greece, working as Javascript Engineer.
+            animation: ticker 10s;
+            animation-iteration-count: infinite;
+            animation-delay: 7s;
+          }
+        }
+      }
 
-						<br /><br />Even though I work as a full stack engineer,
-						having Node.js and PHP as my backend side, I am a big
-						fan of web technologies, specifically Frontend Frameworks and web APIs.
-						I love to constantly experiment them in side projects.
-					</p>
-					<p>
-						<a href="/about">Read more</a>
-					</p>
-				</div>
-			</div>
-		</main>
-		<Footer />
-	</body>
+      @keyframes ticker {
+        0% {
+          bottom: 0;
+        }
+        10% {
+          bottom: 0;
+        }
+        20% {
+          bottom: 1.2em;
+        }
+        30% {
+          bottom: 1.2em;
+        }
+        40% {
+          bottom: 2.4em;
+        }
+        50% {
+          bottom: 2.4em;
+        }
+        60% {
+          bottom: 3.6em;
+        }
+        70% {
+          bottom: 3.6em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <Nav />
+    <header class="hero">
+      <img
+        alt="waves"
+        width="1600"
+        height="1131"
+        class="img"
+        src="/assets/waves.webp"
+        srcset="/assets/waves.webp 800w,/assets/waves.webp 1200w,/assets/waves.webp 1600w,/assets/waves.webp 2400w"
+        sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (max-width: 2400px) 2400px, 1200px"
+      />
+      <div class="gradient"></div>
+      <div class="gradient2"></div>
+      <div class="overlay">
+        <h1 class="title">
+          <small class="rotate-text subtitle">
+            <span>
+              Hi :)<br />
+              Hallo :) <br />
+              Salut :)<br />
+              Hola :)
+            </span>
+          </small>
+          <small class="subtitle">This is the personal website of</small>
+          George Vagdas
+        </h1>
+        <div class="roles">
+          <span class="role">
+            <img
+              alt="gv-dev-sticker"
+              width="22"
+              height="22"
+              src="/assets/gv-dev-sticker.webp"
+            />Web Developer
+            <span class="invert">
+              <img
+                alt="gv-dev-sticker"
+                width="22"
+                height="22"
+                src="/assets/gv-dev-sticker.webp"
+              />Web Developer
+            </span>
+          </span>
+        </div>
+        <p class="desc">
+          Any app that can be written in JavaScript, will eventually be written
+          in JavaScript.
+        </p>
+      </div>
+    </header>
+    <main class="wrapper">
+      <div class="grid">
+        <div class="section">
+          <h3 class="sectionTitle">💻 Selected Work</h3>
+          <PortfolioPreview project={featuredProject} />
+          <div class="buttonContainer">
+            <a href="/projects/" class="button">View All</a>
+          </div>
+        </div>
+        <div class="section">
+          <h3 class="sectionTitle">
+            <img
+              alt="gv-dev-sticker"
+              width="50"
+              height="50"
+              src="/assets/gv-hi.webp"
+            />
+            Who am I
+          </h3>
+          <p class="bio">
+            Originally from Greece, I am currently based in Athens, Greece,
+            working as Javascript Engineer.
+
+            <br /><br />Even though I work as a full stack engineer, having
+            Node.js and PHP as my backend side, I am a big fan of web
+            technologies, specifically Frontend Frameworks and web APIs. I love
+            to constantly experiment them in side projects.
+          </p>
+          <p>
+            <a href="/about">Read more</a>
+          </p>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
 </html>

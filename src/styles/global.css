@@ -64,7 +64,7 @@
 	--slider-bg-before: #fff;
 	--slider-input-bg: var(--c-orange);
 }
-  
+
 [data-theme="light"] {
 	--color-bg: #f2f2f2;
 	--color-text: #000000;
@@ -88,8 +88,10 @@
 	--code: #f2f2f2;
 	--block-quote-border: #8e32dc;
 	--block-quote-text: #dddddd;
-	--c-black: #dddddd; /* change it to oposite for dark theme contrast */
-	--t-fg: #000; /* keep it black for dark theme  */
+	--c-black: #dddddd;
+	/* change it to oposite for dark theme contrast */
+	--t-fg: #000;
+	/* keep it black for dark theme  */
 
 }
 
@@ -135,11 +137,11 @@
 	border-radius: 50%;
 }
 
-input:checked + .slider {
+input:checked+.slider {
 	background-color: var(--slider-input-bg);
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
 	transform: translateX(26px);
 }
 
@@ -164,12 +166,12 @@ input:checked + .slider:before {
 	transform: translateX(0px);
 }
 
-input:checked + .slider .feather-moon {
+input:checked+.slider .feather-moon {
 	opacity: 1;
 	transform: translateX(0);
 }
 
-input:checked + .slider .feather-sun {
+input:checked+.slider .feather-sun {
 	opacity: 0;
 	transform: translateX(-4px);
 }
