@@ -199,6 +199,54 @@ const featuredProject = projects[0]!;
 				margin-top: 2em;
 			}
 		</style>
+		<style lang="scss">
+			.rotate-text {
+				font: normal 2.5em/1.2 sans-serif;
+				height:1.2em;
+				width:100%;
+				position:relative;
+				overflow:hidden;
+				padding:0 0 .1em 0;
+
+				color: var(--c-orange);
+				font-weight: 900;
+				text-shadow: 0 0 4px #000; /* horizontal-offset vertical-offset 'blur' colour */
+				-moz-text-shadow: 0 0 4px #000;
+				-webkit-text-shadow: 0 0 4px #000;
+				> span {
+					float:left;
+					margin-right:.3em;
+					height:1.2em;
+
+					&:first-of-type {
+						font-weight:800;
+						display:inline-block;
+						margin-bottom: 0.5rem;
+						margin-top: 0;
+
+						position: relative;
+						white-space: nowrap;
+						bottom: 0;
+						left: 0;
+						
+						animation: ticker 10s;
+						animation-iteration-count: infinite;
+						animation-delay: 7s;
+					}
+				}
+			}
+
+			@keyframes ticker {
+				0%  { bottom: 0; }
+				10% { bottom: 0; }
+				20% { bottom: 1.2em; }
+				30% { bottom: 1.2em; }
+				40% { bottom: 2.4em; }
+				50% { bottom: 2.4em; }
+				60% { bottom: 3.6em; }
+				70% { bottom: 3.6em; }
+			}
+		</style>
 	</head>
 	<body>
 		<Nav />
@@ -216,8 +264,16 @@ const featuredProject = projects[0]!;
 			<div class="gradient2"></div>
 			<div class="overlay">
 				<h1 class="title">
-					<small class="subtitle">The personal site of</small>George
-					Vagdas
+					<small class="rotate-text subtitle">
+						<span>
+							Hi :)<br>
+							Hallo :) <br>
+							Salut :)<br>
+							Hola :)
+						</span>
+					</small>
+					<small class="subtitle">This is the personal website of</small>
+					George Vagdas
 				</h1>
 				<div class="roles">
 					<span class="role">
