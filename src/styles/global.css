@@ -62,7 +62,7 @@
 	--block-quote-text: #222;
 	--slider-bg: #dddddd;
 	--slider-bg-before: #fff;
-	--slider-input-bg: #8758ff;
+	--slider-input-bg: var(--c-orange);
 }
   
 [data-theme="light"] {
@@ -75,7 +75,7 @@
 	--block-quote-text: #222;
 	--slider-bg: #dddddd;
 	--slider-bg-before: #fff;
-	--slider-input-bg: #8758ff;
+	--slider-input-bg: var(--c-orange);
 	--c-black: #05091e;
 	--t-fg: var(--c-black);
 }
