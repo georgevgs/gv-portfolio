@@ -63,6 +63,10 @@
 	--slider-bg: #dddddd;
 	--slider-bg-before: #fff;
 	--slider-input-bg: var(--c-orange);
+
+	/* Shadows */
+	--shadow-md: 0px 28px 11px rgba(9, 11, 17, 0.01), 0px 16px 10px rgba(9, 11, 17, 0.03),
+		0px 7px 7px rgba(9, 11, 17, 0.05), 0px 2px 4px rgba(9, 11, 17, 0.06);
 }
 
 [data-theme="light"] {
@@ -122,7 +126,8 @@
 	right: 0;
 	top: 0;
 	transition: 0.4s;
-	border-radius: 34px;
+	border-radius: 1.5rem;
+	box-shadow: var(--shadow-md);
 }
 
 .slider:before {
@@ -135,6 +140,7 @@
 	transition: 0.4s;
 	width: 26px;
 	border-radius: 50%;
+	box-shadow: var(--shadow-md);
 }
 
 input:checked+.slider {
@@ -208,7 +214,7 @@ h1 {
 	font-weight: 700;
 	text-transform: uppercase;
 	text-decoration: none;
-	border-radius: 34px;
+	border-radius: 1.5rem;
 }
 
 .button:hover {
