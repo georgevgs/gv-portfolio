@@ -3,23 +3,46 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-  &copy; {currentYear} George Vagdas
-  <small class="byline">🚀 Built using Astro</small>
+  <div class="socials">
+    <a class="social" href="https://linkedin.com/in/gvagdas" target="_blank">
+      <i class="fa-brands fa-linkedin fa-2xl"></i>
+    </a>
+    <a class="social" href="https://github.com/georgevgs" target="_blank">
+      <i class="fa-brands fa-github fa-2xl"></i>
+    </a>
+    <a
+      class="social"
+      href="mailto:dev@vagdas.eu"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <i class="fa-solid fa-envelope fa-2xl"></i>
+    </a>
+  </div>
+   &copy; {currentYear} George Vagdas
 </footer>
 <style>
   footer {
-    text-align: center;
-    padding-top: 8rem;
-    padding-right: 2rem;
-    padding-bottom: 4rem;
-    padding-left: 2rem;
-  }
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 
-  .byline {
-    display: block;
-    margin-top: 1rem;
-    color: var(--t-subdue);
-    font-size: var(--f-d2);
-    text-transform: uppercase;
-  }
+.socials {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social i {
+  color: var(--t-subdue);
+  transition: color 0.2s ease-in-out;
+}
+
+.social i:hover {
+  color: var(--c-orange);
+}
+
 </style>
