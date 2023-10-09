@@ -1,17 +1,21 @@
 ---
 import Toggle from "./ThemeChange.astro";
 
+interface Props {
+  isHomePage?: boolean;
+}
+
+const isHomePage = Astro.props.isHomePage;
+
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
+  { label: "Home", href: "/" },
   { label: "Work", href: "/projects/" },
   { label: "About", href: "/about/" },
 ];
 ---
 
-<nav>
-  <a class="link" href="/">
-    <div class="monogram">GV</div>
-  </a>
+<nav class={isHomePage ? "home-page" : ""}>
   <ul class="nav-items">
     {
       textLinks.map(({ label, href }) => (
@@ -20,6 +24,7 @@ const textLinks: { label: string; href: string }[] = [
             aria-current={Astro.url.pathname === href}
             class:list={[
               "link",
+              isHomePage ? "home-page-link" : "",
               {
                 active:
                   Astro.url.pathname === href ||
@@ -34,7 +39,9 @@ const textLinks: { label: string; href: string }[] = [
       ))
     }
   </ul>
-  <Toggle />
+  <div class="toggle-wrapper">
+    <Toggle />
+  </div>
 </nav>
 
 <style>
@@ -52,75 +59,103 @@ const textLinks: { label: string; href: string }[] = [
     height: 40px;
   }
 
+  .home-page {
+    background: linear-gradient(
+      to right,
+      var(--c-orange) 0%,
+      var(--c-orange) 66.66%,
+      var(--color-bg-inverse) 66.66%,
+      var(--color-bg-inverse) 100%
+    );
+  }
+
+  .nav-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .toggle-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media screen and (max-width: 768px) {
+    /* Mobile styles */
+    .home-page {
+      background: var(--c-orange);
+    }
+    .nav-container {
+      justify-content: flex-start;
+    }
+    .nav-items {
+      margin-right: auto;
+    }
+  }
+
   .link {
-    color: var(--t-subdue);
+    color: var(--color-text);
     display: block;
     text-decoration: none;
     font-size: var(--f-d1);
+    font-weight: bold;
     text-transform: uppercase;
     padding-top: 0.75em;
     padding-bottom: 0.75em;
+    border: 3px solid var(--color-text);
     border-radius: 1.5rem;
+    padding: 0.5em 1em;
+  }
+
+  .home-page-link {
+    color: var(--color-text-inverse);
+    border: 3px solid var(--color-text-inverse);
   }
 
   .link:hover,
   .link:focus {
     color: var(--c-orange);
     border-radius: 1.5rem;
+    border: 3px solid var(--c-orange);
+  }
+
+  .home-page-link:hover,
+  .home-page-link:focus {
+    color: var(--color-text);
+    border-radius: 1.5rem;
+    border: 3px solid var(--color-text);
   }
 
   .link.active {
-		color: var(--c-orange);
-	}
-
-  .monogram {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2em;
-    height: 2em;
-    margin-right: 0.5rem;
-    font-weight: 900;
-    /* letter-spacing: -0.125rem; */
-    border: 3px solid currentColor;
-    border-radius: 50%;
     color: var(--c-orange);
-    box-shadow: var(--shadow-md);
+    border: 3px solid var(--c-orange);
   }
 
-  .monogram:hover {
-    color: var(--c-black);
+  .home-page-link.active {
+    color: var(--color-text);
+    border: 3px solid var(--color-text);
   }
 
   .nav-items {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
     display: flex;
     gap: 1rem;
     list-style: none;
     flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
   }
 
-  .socials {
-    display: flex;
-    gap: 0.75em;
-    margin-left: auto;
-  }
-
-  .social {
-    display: block;
-  }
-
-  .socialIcon {
-    display: block;
-    width: 1.25rem;
-    height: 1.25rem;
-    fill: var(--t-subdue);
-    transition: fill linear 150ms;
-  }
-
-  .socialIcon:hover {
-    fill: var(--c-orange);
+  @media screen and (max-width: 768px) {
+    /* Mobile styles */
+    .nav-items {
+      flex-grow: 0; /* Disable growing to free up space for the toggle */
+      justify-content: flex-start; /* Align items to the left */
+    }
   }
 </style>
+
 <script>
   // Get the theme toggle input
   const themeToggle = document.querySelector(
