@@ -35,7 +35,6 @@
 }
 
 .name {
-  font-family: "Helvetica Neue", sans-serif;
   font-size: 4.5rem;
   margin-bottom: 10px;
   background: -webkit-linear-gradient(45deg, #2f4fa1, var(--color-bg-inverse));
