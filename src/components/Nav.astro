@@ -24,7 +24,7 @@ const textLinks: { label: string; href: string }[] = [
         <li>
           <a
             aria-current={Astro.url.pathname === href}
-            aria-label={`It's${label} website page`}
+            aria-label={`It's ${label} website page`}
             class:list={[
               "link",
               isHomePage ? "home-page-link" : "",
