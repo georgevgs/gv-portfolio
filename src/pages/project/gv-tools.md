@@ -4,6 +4,7 @@ title: GV Tools
 client: Self
 publishDate: 2021-05-10 12:00:00
 img: /assets/gv-tools.webp
+parentURL: /projects
 description: |
   An app to help my teammates and me facilitate our everyday tasks and life.
 tags:

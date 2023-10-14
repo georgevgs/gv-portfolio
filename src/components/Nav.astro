@@ -10,13 +10,15 @@ const isHomePage = Astro.props.isHomePage;
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
   { label: "Home", href: "/" },
-  { label: "Work", href: "/projects/" },
+  { label: "Work", href: "/work/" },
+  { label: "Projects", href: "/projects/" },
   { label: "About", href: "/about/" },
 ];
 ---
 
 <nav class={isHomePage ? "home-page" : ""}>
-  <ul class="nav-items">
+  <button id="menuToggle" class="menu-toggle">☰</button>
+  <ul class={`nav-items ${isHomePage ? "nav-items--home-page" : ""}`}>
     {
       textLinks.map(({ label, href }) => (
         <li>
@@ -51,12 +53,11 @@ const textLinks: { label: string; href: string }[] = [
     align-items: center;
     padding: 1rem;
     justify-content: space-between;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 99;
     background-color: var(--color-bg);
-    height: 40px;
+    height: 60px;
   }
 
   .home-page {
@@ -69,94 +70,130 @@ const textLinks: { label: string; href: string }[] = [
     );
   }
 
-  .nav-container {
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-between;
-  }
-
   .toggle-wrapper {
-    display: flex;
     justify-content: flex-end;
   }
 
+  .menu-toggle {
+    display: none;
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text);
+    z-index: 1001;
+  }
+
+  .nav-items {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    transition: background 0.3s ease-in-out;
+  }
+
   @media screen and (max-width: 768px) {
-    /* Mobile styles */
     .home-page {
       background: var(--c-orange);
     }
-    .nav-container {
-      justify-content: flex-start;
+
+    .menu-toggle {
+      display: flex;
     }
+    
     .nav-items {
-      margin-right: auto;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 80%;
+      height: calc(100% - 60px);
+      background: var(--color-bg);
+      overflow-y: auto;
+      transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 2rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      transform: translateX(-100%);
+    }
+
+    .nav-items--home-page {
+      background: var(--c-orange);
+    }
+
+    .nav-items.show {
+      transform: translateX(0%);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
   }
 
   .link {
     color: var(--color-text);
     display: block;
+    text-align: left;
     text-decoration: none;
     font-size: var(--f-d1);
     font-weight: bold;
     text-transform: uppercase;
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
-    border: 3px solid var(--color-text);
-    border-radius: 1.5rem;
-    padding: 0.5em 1em;
+    padding: 1rem;
+    border: 2px solid var(--color-text);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease-in-out;
   }
 
   .home-page-link {
     color: var(--color-text-inverse);
-    border: 3px solid var(--color-text-inverse);
+    border: 2px solid var(--color-text-inverse);
   }
 
   .link:hover,
   .link:focus {
     color: var(--c-orange);
-    border-radius: 1.5rem;
-    border: 3px solid var(--c-orange);
+    border: 2px solid var(--c-orange);
   }
 
   .home-page-link:hover,
   .home-page-link:focus {
     color: var(--color-text);
-    border-radius: 1.5rem;
-    border: 3px solid var(--color-text);
+    border: 2px solid var(--color-text);
   }
 
   .link.active {
     color: var(--c-orange);
-    border: 3px solid var(--c-orange);
+    border: 2px solid var(--c-orange);
   }
 
   .home-page-link.active {
     color: var(--color-text);
-    border: 3px solid var(--color-text);
-  }
-
-  .nav-items {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    flex-direction: row;
-    justify-content: center;
-    flex-grow: 1;
-  }
-
-  @media screen and (max-width: 768px) {
-    /* Mobile styles */
-    .nav-items {
-      flex-grow: 0; /* Disable growing to free up space for the toggle */
-      justify-content: flex-start; /* Align items to the left */
-    }
+    border: 2px solid var(--color-text);
   }
 </style>
 
 <script>
+  // Toggle mobile menu
+  const menuToggle = document.getElementById("menuToggle") as HTMLButtonElement;
+  const navItems = document.querySelector(".nav-items") as HTMLUListElement;
+
+  menuToggle.addEventListener("click", function () {
+    navItems.classList.toggle("show");
+  });
+
+  // Add this part to close the menu when clicking anywhere outside of it
+  document.addEventListener("click", function (event) {
+    const target = event.target as Node; // Type assertion here
+    if (navItems && menuToggle) {
+      // Add null checks for safety
+      if (!navItems.contains(target) && !menuToggle.contains(target)) {
+        navItems.classList.remove("show");
+      }
+    }
+  });
+
   // Get the theme toggle input
   const themeToggle = document.querySelector(
     '.theme-switch input[type="checkbox"]'
