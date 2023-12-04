@@ -9,7 +9,7 @@ import type { Project } from "../types";
 
 // Data Fetching: List all Markdown posts in the repo.
 const projects = await Astro.glob<Project>("./work/**/*.md");
-const featuredProject = projects[1];
+const featuredProject = projects[2];
 ---
 
 <html lang="en">
