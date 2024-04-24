@@ -19,6 +19,10 @@ const featuredProject = projects[1];
       description="George Vagdas: Personal Website..."
     />
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
       .wrapper {
         margin-top: 2em;
         margin-bottom: 2em;
@@ -72,40 +76,45 @@ const featuredProject = projects[1];
     <Nav isHomePage={true} />
     <Header />
     <main class="wrapper">
-      <div class="grid">
-        <div class="section">
-          <h3 class="sectionTitle">💻 Selected Work</h3>
-          <PortfolioPreview project={featuredProject} />
-          <div class="buttonContainer">
+      <div class="grid md:grid-cols-2">
+        <div class="section flex flex-col">
+          <div>
+            <h3 class="sectionTitle">💻 Selected Work</h3>
+            <PortfolioPreview project={featuredProject} />
+          </div>
+          <div class="mt-auto text-center pt-6">
             <a href="/work/" class="button" aria-label="View all works"
               >View All</a
             >
           </div>
         </div>
-        <div class="section">
-          <h3 class="sectionTitle">
-            <img
-              alt="gv-dev-sticker"
-              width="50"
-              height="50"
-              src="/assets/gv-hi.webp"
-            />
-            Who am I
-          </h3>
-          <p class="bio">
-            Originally from Greece 🇬🇷, I am currently based in 📍 Athens,
-            working as Javascript Engineer.
+        <div class="section flex flex-col">
+          <div>
+            <h3 class="sectionTitle flex items-center">
+              <img
+                alt="gv-dev-sticker"
+                width="50"
+                height="50"
+                src="/assets/gv-hi.webp"
+                class="mr-3 pb-2"
+              />
+              Who am I
+            </h3>
+            <p class="bio md:pt-14">
+              Originally from Greece 🇬🇷, I am currently based in 📍 Athens,
+              working as Javascript Engineer.
 
-            <br /><br />Even though I work as a full stack engineer, having
-            Node.js and PHP as my backend side, I am a big fan of web
-            technologies, specifically Frontend Frameworks and web APIs. I love
-            to constantly experiment them in side projects.
-          </p>
-          <p>
-            <a href="/about" class="button" aria-label="Read more about me"
+              <br /><br />Even though I work as a full stack engineer, having
+              Node.js and PHP as my backend side, I am a big fan of web
+              technologies, specifically Frontend Frameworks and web APIs. I
+              love to constantly experiment with them in side projects.
+            </p>
+          </div>
+          <div class="mt-auto text-center">
+            <a href="/about/" class="button" aria-label="Read more about me"
               >Read more</a
             >
-          </p>
+          </div>
         </div>
       </div>
     </main>

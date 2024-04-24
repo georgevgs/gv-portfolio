@@ -62,13 +62,7 @@ const textLinks: { label: string; href: string }[] = [
   }
 
   .home-page {
-    background: linear-gradient(
-      to right,
-      var(--c-orange) 0%,
-      var(--c-orange) 66.66%,
-      var(--color-bg-inverse) 66.66%,
-      var(--color-bg-inverse) 100%
-    );
+    background: #2677eb;
   }
 
   .toggle-wrapper {
@@ -97,16 +91,16 @@ const textLinks: { label: string; href: string }[] = [
 
   @media screen and (max-width: 768px) {
     .home-page {
-      background: var(--c-orange);
+      background: var(--c-blue-darker);
     }
 
     .menu-toggle {
       display: flex;
     }
-    
+
     .nav-items {
       position: fixed;
-      top: 60px;
+      top: 70px;
       left: 0;
       width: 80%;
       height: calc(100% - 60px);
@@ -123,7 +117,7 @@ const textLinks: { label: string; href: string }[] = [
     }
 
     .nav-items--home-page {
-      background: var(--c-orange);
+      background: var(--c-blue-darker);
     }
 
     .nav-items.show {
@@ -149,8 +143,8 @@ const textLinks: { label: string; href: string }[] = [
 
   .link:hover,
   .link:focus {
-    color: var(--c-orange);
-    border: 2px solid var(--c-orange);
+    color: var(--c-blue);
+    border: 2px solid var(--c-blue);
   }
 
   .home-page-link:hover,
@@ -160,8 +154,8 @@ const textLinks: { label: string; href: string }[] = [
   }
 
   .link.active {
-    color: var(--c-orange);
-    border: 2px solid var(--c-orange);
+    color: var(--c-blue);
+    border: 2px solid var(--c-blue);
   }
 
   .home-page-link.active {

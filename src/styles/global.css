@@ -2,7 +2,8 @@
 :root {
   /* Colors */
   --c-black: #05091e;
-  --c-blue: #46b4ff;
+  --c-blue: #4da2ff;
+  --c-blue-darker: #2677eb;
   --c-gray: #90aab7;
   --c-green: #9ef2cb;
   --c-pink: #ffb8d9;
@@ -205,7 +206,7 @@ img {
 }
 
 a {
-  color: var(--c-orange);
+  color: var(--c-blue);
 }
 
 h1 {
@@ -232,4 +233,10 @@ h1 {
   margin-right: auto;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.title {
+  font-weight: bold;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
