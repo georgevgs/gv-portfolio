@@ -20,7 +20,7 @@
   margin-bottom: 10px;
   color: var(--c-orange);
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  animation: name-slide 0.5s ease forwards;
+  animation: name-slide 1.5s ease forwards;
 }
 
 .role {
@@ -34,12 +34,17 @@
 .quote {
   font-style: italic;
   font-size: 1.2rem;
+  color: var(--color-text-inverse);
   opacity: 0;
   margin: 20px;
   padding: 10px;
-  border-left: 4px solid var(--color-text-inverse);
+  border-left: 4px solid var(--color-text);
   text-align: left;
   animation: quote-slide 1s forwards 1s;
+}
+
+.code-bracket-image {
+  animation: slide-from-left 3s ease forwards;
 }
 
 .svg-container {
@@ -66,6 +71,17 @@
   }
   50% {
     text-shadow: 0px 4px 12px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes slide-from-left {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
