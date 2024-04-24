@@ -25,4 +25,4 @@ Features:
 - Add and calculate office days.
 
 Website: <br>
-<a href="https://gvtools.work" target="_blank">gvtools.work</a>
+<a href="https://gv-tools.vercel.app" target="_blank">gvtools.work</a>
