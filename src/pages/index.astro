@@ -6,6 +6,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import PortfolioPreview from "../components/PortfolioPreview.astro";
 import type { Project } from "../types";
+import Bento from "../components/Bento.astro";
 
 // Data Fetching: List all Markdown posts in the repo.
 const projects = await Astro.glob<Project>("./work/**/*.md");
@@ -18,106 +19,8 @@ const featuredProject = projects[1];
       title="George Vagdas | Web Developer"
       description="George Vagdas: Personal Website..."
     />
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-
-      .wrapper {
-        margin-top: 2em;
-        margin-bottom: 2em;
-      }
-
-      .img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-
-      .grid {
-        display: grid;
-        grid-gap: 2rem;
-      }
-
-      @media (min-width: 1200px) {
-        .grid {
-          grid-template-columns: 2fr 1fr;
-        }
-      }
-
-      .sectionTitle {
-        font-weight: 700;
-        font-size: var(--f-u8);
-        margin-top: 4rem;
-        margin-bottom: 2rem;
-      }
-
-      .bio {
-        line-height: 2;
-        margin-bottom: 2rem;
-      }
-
-      .bio > span:first-of-type {
-        line-height: 1;
-        margin-bottom: 0.5em;
-        display: block;
-        font-weight: 700;
-        font-size: var(--f-u4);
-      }
-
-      .buttonContainer {
-        text-align: center;
-        margin-top: 2em;
-        border-radius: 1.5rem;
-      }
-    </style>
   </head>
   <body>
-    <Nav isHomePage={true} />
-    <Header />
-    <main class="wrapper">
-      <div class="grid md:grid-cols-2">
-        <div class="section flex flex-col">
-          <div>
-            <h3 class="sectionTitle">💻 Selected Work</h3>
-            <PortfolioPreview project={featuredProject} />
-          </div>
-          <div class="mt-auto text-center pt-6">
-            <a href="/work/" class="button" aria-label="View all works"
-              >View All</a
-            >
-          </div>
-        </div>
-        <div class="section flex flex-col">
-          <div>
-            <h3 class="sectionTitle flex items-center">
-              <img
-                alt="gv-dev-sticker"
-                width="50"
-                height="50"
-                src="/assets/gv-hi.webp"
-                class="mr-3 pb-2"
-              />
-              Who am I
-            </h3>
-            <p class="bio md:pt-14">
-              Originally from Greece 🇬🇷, I am currently based in 📍 Athens,
-              working as Javascript Engineer.
-
-              <br /><br />Even though I work as a full stack engineer, having
-              Node.js and PHP as my backend side, I am a big fan of web
-              technologies, specifically Frontend Frameworks and web APIs. I
-              love to constantly experiment with them in side projects.
-            </p>
-          </div>
-          <div class="mt-auto text-center">
-            <a href="/about/" class="button" aria-label="Read more about me"
-              >Read more</a
-            >
-          </div>
-        </div>
-      </div>
-    </main>
-    <Footer />
+    <Bento />
   </body>
 </html>

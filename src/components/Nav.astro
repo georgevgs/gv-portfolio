@@ -169,7 +169,7 @@ const textLinks: { label: string; href: string }[] = [
   const menuToggle = document.getElementById("menuToggle") as HTMLButtonElement;
   const navItems = document.querySelector(".nav-items") as HTMLUListElement;
 
-  menuToggle.addEventListener("click", function () {
+  menuToggle?.addEventListener("click", function () {
     navItems.classList.toggle("show");
   });
 
@@ -215,5 +215,5 @@ const textLinks: { label: string; href: string }[] = [
   }
 
   // Add an event listener to the theme toggle, which will switch the theme
-  themeToggle.addEventListener("change", switchTheme, false);
+  themeToggle?.addEventListener("change", switchTheme, false);
 </script>
