@@ -1,12 +1,26 @@
+---
+import "../styles/bento.css";
+---
+
 <section class="bg-gray-50 min-h-screen flex items-center justify-center">
   <!-- Bento Grid -->
   <div
-    class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 p-10 md:p-20 xl:p-40 max-w-screen-2xl w-full"
+    class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 p-10 md:p-16 xl:p-24 max-w-screen-2xl w-full"
   >
     <!-- Bento Box 1: Large Horizontal Box -->
     <div
-      class="bg-white shadow rounded-3xl p-6 col-span-2 sm:col-span-3 lg:col-span-2 min-h-60"
+      class="bg-white shadow rounded-3xl p-6 col-span-2 sm:col-span-3 lg:col-span-2 min-h-60 flex flex-col sm:flex-row items-center"
     >
+      <img
+        src="/assets/gv-dev-sticker.webp"
+        alt="George Vagdas sticker"
+        class="h-40 w-40 flex-shrink-0"
+      />
+      <h2 class="mt-4 sm:mt-0 sm:ml-4 flex-grow text-center sm:text-left">
+        Hello, I'm <span class="bento-name">George</span>, a Front-End
+        Developer, originally from Greece 🇬🇷 and I am currently based in 📍
+        Athens.
+      </h2>
     </div>
 
     <!-- Bento Box 2: Small Box -->
@@ -29,13 +43,13 @@
 
     <!-- Bento Box 5: Small Box -->
     <div
-      class="bg-white shadow rounded-3xl p-6 col-span-2 sm:col-span-1 lg:col-span-1 min-h-60"
+      class="bg-linkedin-blue shadow rounded-3xl p-6 col-span-2 sm:col-span-1 lg:col-span-1 min-h-60"
     >
     </div>
 
     <!-- Bento Box 6: Small Box -->
     <div
-      class="bg-white shadow rounded-3xl p-6 col-span-1 sm:col-span-2 lg:col-span-1 min-h-60"
+      class="bg-github-black shadow rounded-3xl p-6 col-span-1 sm:col-span-2 lg:col-span-1 min-h-60"
     >
     </div>
 
