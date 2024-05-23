@@ -9,14 +9,16 @@ import "../styles/bento.css";
   >
     <!-- Bento Box 1: Large Horizontal Box -->
     <div
-      class="bg-white shadow rounded-3xl p-6 col-span-2 sm:col-span-3 lg:col-span-2 min-h-72 flex flex-col sm:flex-row items-center"
+      class="bg-white shadow rounded-3xl p-6 col-span-2 sm:col-span-3 lg:col-span-2 min-h-44 sm:min-h-60 flex flex-col sm:flex-row items-center"
     >
       <img
         src="/assets/gv-dev-sticker.webp"
         alt="George Vagdas sticker"
         class="h-40 w-40 flex-shrink-0"
       />
-      <h2 class="mt-4 sm:mt-0 sm:ml-4 flex-grow text-center sm:text-left">
+      <h2
+        class="text-black mt-4 sm:mt-0 sm:ml-4 flex-grow text-center sm:text-left"
+      >
         Hello, I'm <span class="bento-name">George</span>, a Front-End
         Developer, originally from Greece 🇬🇷 and I am currently based in 📍
         Athens.
@@ -25,53 +27,106 @@ import "../styles/bento.css";
 
     <!-- Bento Box 2: Small Box -->
     <div
-      class="bg-white shadow rounded-3xl p-6 col-span-1 sm:col-span-2 lg:col-span-1 min-h-72"
+      class="bg-white shadow rounded-3xl p-6 col-span-1 sm:col-span-2 lg:col-span-1 min-h-44 sm:min-h-60"
     >
     </div>
 
     <!-- Bento Box 3: Large Vertical Box -->
     <div
-      class="bg-white shadow rounded-3xl p-6 col-span-1 sm:col-span-1 lg:col-span-1 sm:row-span-2 min-h-72"
+      class="bg-white shadow rounded-3xl p-6 col-span-1 sm:col-span-1 lg:col-span-1 sm:row-span-2 min-h-44 sm:min-h-60"
     >
     </div>
 
     <!-- Bento Box 4: Large Vertical Box -->
     <div
-      class="bg-white shadow rounded-3xl p-6 col-span-2 sm:col-span-1 lg:col-span-1 row-span-2 min-h-72"
+      class="bg-white shadow rounded-3xl p-6 col-span-2 sm:col-span-1 lg:col-span-1 row-span-2 min-h-44 sm:min-h-60"
     >
     </div>
 
     <!-- Bento Box 5: Small Box -->
-    <div
-      class="bg-linkedin-blue shadow rounded-3xl p-6 col-span-2 sm:col-span-1 lg:col-span-1 min-h-72 flex justify-center items-center"
+    <a
+      href="https://linkedin.com/in/gvagdas"
+      target="_blank"
+      class="col-span-2 sm:col-span-1 lg:col-span-1"
     >
-      <img
-        src="/assets/svg/linkedin-logo.svg"
-        alt="LinkedIn logo"
-        class="h-20 w-20"
-      />
-    </div>
+      <div
+        class="bg-linkedin-blue shadow rounded-3xl p-6 min-h-60 sm:min-h-72 flex justify-center items-center transform transition-transform hover:scale-105 bento-box"
+      >
+        <img
+          src="/assets/svg/linkedin-logo.svg"
+          alt="LinkedIn logo"
+          class="h-20 w-20"
+        />
+      </div>
+    </a>
 
     <!-- Bento Box 6: Small Box -->
-    <div
-      class="bg-github-black shadow rounded-3xl p-6 col-span-1 sm:col-span-2 lg:col-span-1 min-h-72 flex justify-center items-center"
+    <a
+      href="https://github.com/georgevgs"
+      target="_blank"
+      class="col-span-1 sm:col-span-2 lg:col-span-1"
     >
-      <img
-        src="/assets/svg/github-logo.svg"
-        alt="Github logo"
-        class="h-20 w-20"
-      />
-    </div>
+      <div
+        class="bg-github-black shadow rounded-3xl p-6 min-h-60 sm:min-h-72 flex justify-center items-center transform transition-transform hover:scale-105 bento-box"
+      >
+        <img
+          src="/assets/svg/github-logo.svg"
+          alt="Github logo"
+          class="h-20 w-20"
+        />
+      </div>
+    </a>
 
     <!-- Bento Box 7: Large Horizontal Box -->
     <div
-      class="bg-white shadow rounded-3xl p-6 col-span-1 sm:col-span-2 lg:col-span-2 min-h-72"
+      class="bg-neon-orange shadow-lg rounded-3xl p-6 col-span-1 sm:col-span-2 lg:col-span-2 min-h-44 sm:min-h-60 relative overflow-hidden"
     >
+      <div
+        class="absolute inset-0 p-4 flex flex-col sm:flex-row justify-between items-start"
+      >
+        <img
+          src="/assets/the-kitchen-studio.webp"
+          alt="Description of the image"
+          class="h-1/3 sm:h-full w-full sm:w-auto rounded-3xl shadow-lg"
+        />
+        <div
+          class="flex flex-col sm:justify-between h-full w-full sm:w-auto items-center sm:items-start"
+        >
+          <h2
+            class="bento-project-text text-white p-2 sm:p-4 text-center sm:text-left animate-fade-in-down"
+          >
+            The Kitchen Studio
+          </h2>
+          <div class="flex justify-center sm:justify-end w-full mt-auto mb-4">
+            <a
+              href="/work/the-kitchen-studio"
+              class="relative inline-flex items-center px-4 py-2 sm:px-5 sm:py-2 bg-white rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <span class="text-neon-orange font-semibold text-sm sm:text-base"
+                >Go to Work</span
+              >
+              <svg
+                class="ml-2 w-4 h-4 sm:w-5 sm:h-5 text-neon-orange"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Bento Box 8: Small Box -->
     <div
-      class="bg-white shadow rounded-3xl p-6 col-span-2 sm:col-span-1 lg:col-span-1 min-h-72"
+      class="bg-white shadow rounded-3xl p-6 col-span-2 sm:col-span-1 lg:col-span-1 min-h-44 sm:min-h-60"
     >
     </div>
   </div>
