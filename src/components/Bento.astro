@@ -33,8 +33,41 @@ import "../styles/bento.css";
 
     <!-- Bento Box 3: Large Vertical Box -->
     <div
-      class="bg-white shadow rounded-3xl p-6 col-span-1 sm:col-span-1 lg:col-span-1 sm:row-span-2 min-h-44 sm:min-h-60"
+      class="bg-neon-orange shadow rounded-3xl p-6 col-span-1 sm:col-span-1 lg:col-span-1 sm:row-span-2 min-h-44 sm:min-h-60 relative overflow-hidden"
     >
+      <div class="flex flex-col justify-between items-center h-full space-y-4">
+        <img
+          src="/assets/karadimas.webp"
+          alt="Ioannis Karadimas"
+          class="h-40 w-full sm:h-60 lg:h-80 rounded-3xl shadow-lg"
+        />
+        <h2
+          class="bento-project-text text-white text-center lg:pt-2 animate-fade-in-down"
+        >
+          Ioannis Karadimas
+        </h2>
+        <div class="flex justify-center w-full mt-auto mb-6 lg:mb-4">
+          <a
+            href="/work/karadimas"
+            class="bg-white relative inline-flex items-center px-4 py-2 sm:px-5 sm:py-2 text-neon-orange rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <span class="font-semibold text-sm sm:text-base"> Go to Work </span>
+            <svg
+              class="ml-2 w-4 h-4 sm:w-5 sm:h-5 text-neon-orange"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
 
     <!-- Bento Box 4: Large Vertical Box -->
@@ -82,29 +115,31 @@ import "../styles/bento.css";
       class="bg-neon-orange shadow-lg rounded-3xl p-6 col-span-1 sm:col-span-2 lg:col-span-2 min-h-44 sm:min-h-60 relative overflow-hidden"
     >
       <div
-        class="absolute inset-0 p-4 flex flex-col sm:flex-row justify-between items-start"
+        class="absolute inset-0 p-4 flex flex-col lg:flex-row justify-between items-start space-y-4 lg:space-y-0 lg:space-x-4"
       >
         <img
           src="/assets/the-kitchen-studio.webp"
           alt="Description of the image"
-          class="h-1/3 sm:h-full w-full sm:w-auto rounded-3xl shadow-lg"
+          class="h-1/3 sm:h-1/2 lg:h-full w-full sm:w-full lg:w-1/2 rounded-3xl shadow-lg object-cover"
         />
         <div
-          class="flex flex-col sm:justify-between h-full w-full sm:w-auto items-center sm:items-start"
+          class="flex flex-col justify-between h-full w-full lg:w-1/2 items-center lg:items-start"
         >
           <h2
-            class="bento-project-text text-white p-2 sm:p-4 text-center sm:text-left animate-fade-in-down"
+            class="bento-project-text text-white lg:pt-2 text-center lg:text-left animate-fade-in-down"
           >
             The Kitchen Studio
           </h2>
-          <div class="flex justify-center sm:justify-end w-full mt-auto mb-4">
+          <div
+            class="flex justify-center lg:justify-end w-full mt-auto mb-6 lg:mb-4"
+          >
             <a
               href="/work/the-kitchen-studio"
               class="relative inline-flex items-center px-4 py-2 sm:px-5 sm:py-2 bg-white rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1"
             >
-              <span class="text-neon-orange font-semibold text-sm sm:text-base"
-                >Go to Work</span
-              >
+              <span class="text-neon-orange font-semibold text-sm sm:text-base">
+                Go to Work
+              </span>
               <svg
                 class="ml-2 w-4 h-4 sm:w-5 sm:h-5 text-neon-orange"
                 xmlns="http://www.w3.org/2000/svg"

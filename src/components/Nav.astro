@@ -198,7 +198,7 @@ const textLinks: { label: string; href: string }[] = [
     document.documentElement.setAttribute("data-theme", currentTheme);
 
     // If the current theme is dark, check the theme toggle
-    if (currentTheme === "dark") {
+    if (currentTheme === "dark" && themeToggle) {
       themeToggle.checked = true;
     }
   }
