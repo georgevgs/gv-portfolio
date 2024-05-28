@@ -6,7 +6,10 @@ export default {
       colors: {
         "linkedin-blue": "#0072b1",
         "github-black": "#24292e",
-        "neon-orange": "#ff5f1f",
+        "neon-orange": "#ff7900",
+        "neon-pink": "#ff3885",
+        "neon-blue": "#b3c5d2",
+        "neon-green": "#00cc00",
       },
     },
   },

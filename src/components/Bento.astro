@@ -1,5 +1,16 @@
 ---
 import "../styles/bento.css";
+
+const techStack = [
+  { name: "React", bg: "bg-blue-100", text: "text-blue-800" },
+  { name: "Angular", bg: "bg-red-100", text: "text-red-800" },
+  { name: "TypeScript", bg: "bg-green-100", text: "text-green-800" },
+  { name: "AstroJS", bg: "bg-indigo-100", text: "text-indigo-800" },
+  { name: "Chakra UI", bg: "bg-purple-100", text: "text-purple-800" },
+  { name: "Tailwind", bg: "bg-yellow-100", text: "text-yellow-800" },
+  { name: "Jest", bg: "bg-pink-100", text: "text-pink-800" },
+  { name: "Cypress", bg: "bg-gray-100", text: "text-gray-800" },
+];
 ---
 
 <section class="bg-gray-50 min-h-screen flex items-center justify-center">
@@ -17,7 +28,7 @@ import "../styles/bento.css";
         class="h-40 w-40 flex-shrink-0"
       />
       <h2
-        class="text-black mt-4 sm:mt-0 sm:ml-4 flex-grow text-center sm:text-left"
+        class="text-black mt-4 sm:mt-0 sm:ml-4 flex-grow text-center sm:text-left cursor-default"
       >
         Hello, I'm <span class="bento-name">George</span>, a Front-End
         Developer, originally from Greece 🇬🇷 and I am currently based in 📍
@@ -27,8 +38,37 @@ import "../styles/bento.css";
 
     <!-- Bento Box 2: Small Box -->
     <div
-      class="bg-white shadow rounded-3xl p-6 col-span-1 sm:col-span-2 lg:col-span-1 min-h-44 sm:min-h-60"
+      class="bg-neon-pink shadow-lg rounded-3xl p-6 col-span-1 sm:col-span-2 lg:col-span-1 min-h-44 sm:min-h-60"
     >
+      <h2
+        class="bento-project-text mb-6 text-center text-white text-3xl font-bold"
+      >
+        Tech Stack
+      </h2>
+      <div
+        class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2"
+      >
+        {
+          techStack
+            .slice(0, 4)
+            .map((tech, index) => (
+              <div
+                class={`${tech.bg} ${tech.text} flex items-center justify-center px-3 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center cursor-default sm:hidden`}
+              >
+                {tech.name}
+              </div>
+            ))
+        }
+        {
+          techStack.map((tech) => (
+            <div
+              class={`${tech.bg} ${tech.text} flex items-center justify-center px-3 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center cursor-default hidden sm:flex`}
+            >
+              {tech.name}
+            </div>
+          ))
+        }
+      </div>
     </div>
 
     <!-- Bento Box 3: Large Vertical Box -->
@@ -42,7 +82,7 @@ import "../styles/bento.css";
           class="h-40 w-full sm:h-60 lg:h-80 rounded-3xl shadow-lg"
         />
         <h2
-          class="bento-project-text text-white text-center lg:pt-2 animate-fade-in-down"
+          class="bento-project-text text-white text-center lg:pt-2 animate-fade-in-down cursor-default"
         >
           Ioannis Karadimas
         </h2>
@@ -72,8 +112,41 @@ import "../styles/bento.css";
 
     <!-- Bento Box 4: Large Vertical Box -->
     <div
-      class="bg-white shadow rounded-3xl p-6 col-span-2 sm:col-span-1 lg:col-span-1 row-span-2 min-h-44 sm:min-h-60"
+      class="bg-neon-orange shadow rounded-3xl p-6 col-span-2 sm:col-span-1 lg:col-span-1 row-span-2 min-h-44 sm:min-h-60"
     >
+      <div class="flex flex-col justify-between items-center h-full space-y-4">
+        <img
+          src="/assets/glyfada-rent-a-bike.webp"
+          alt="Glyfada Rent a Bike"
+          class="h-40 w-full sm:h-60 lg:h-80 rounded-3xl shadow-lg"
+        />
+        <h2
+          class="bento-project-text text-white text-center lg:pt-2 animate-fade-in-down cursor-default"
+        >
+          Glyfada Rent a Bike
+        </h2>
+        <div class="flex justify-center w-full mt-auto mb-6 lg:mb-4">
+          <a
+            href="/work/glyfada-rent-a-bike"
+            class="bg-white relative inline-flex items-center px-4 py-2 sm:px-5 sm:py-2 text-neon-orange rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <span class="font-semibold text-sm sm:text-base"> Go to Work </span>
+            <svg
+              class="ml-2 w-4 h-4 sm:w-5 sm:h-5 text-neon-orange"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
 
     <!-- Bento Box 5: Small Box -->
@@ -126,7 +199,7 @@ import "../styles/bento.css";
           class="flex flex-col justify-between h-full w-full lg:w-1/2 items-center lg:items-start"
         >
           <h2
-            class="bento-project-text text-white lg:pt-2 text-center lg:text-left animate-fade-in-down"
+            class="bento-project-text text-white lg:pt-2 text-center lg:text-left animate-fade-in-down cursor-default"
           >
             The Kitchen Studio
           </h2>
@@ -161,8 +234,19 @@ import "../styles/bento.css";
 
     <!-- Bento Box 8: Small Box -->
     <div
-      class="bg-white shadow rounded-3xl p-6 col-span-2 sm:col-span-1 lg:col-span-1 min-h-44 sm:min-h-60"
+      class="bg-neon-green shadow-lg rounded-3xl p-6 col-span-2 sm:col-span-1 lg:col-span-1 min-h-44 sm:min-h-60 flex flex-col justify-center items-center text-center"
     >
+      <h2 class="bento-project-text text-white text-3xl font-bold mb-4">
+        Contact Me
+      </h2>
+      <p class="text-white text-lg mb-6">
+        Let's create something amazing together!
+      </p>
+      <a
+        href="/about"
+        class="bg-white text-neon-green py-2 px-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 font-semibold"
+        >Get in Touch</a
+      >
     </div>
   </div>
 </section>
