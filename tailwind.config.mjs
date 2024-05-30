@@ -11,6 +11,12 @@ export default {
         "neon-blue": "#b3c5d2",
         "neon-green": "#00cc00",
       },
+      scale: {
+        103: "1.03",
+      },
+      rotate: {
+        '315': '315deg',
+      }
     },
   },
   plugins: [],

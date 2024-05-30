@@ -16,44 +16,65 @@ const techStack = [
 <section class="bg-gray-50 min-h-screen flex items-center justify-center">
   <!-- Bento Grid -->
   <div
-    class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 p-10 md:p-16 xl:p-24 max-w-screen-2xl"
+    class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 p-4 md:p-16 xl:p-24 max-w-screen-2xl"
   >
     <!-- Bento Box 1: Large Horizontal Box -->
-    <div
-      class="bg-white shadow rounded-3xl p-6 col-span-2 sm:col-span-3 lg:col-span-2 min-h-44 sm:min-h-60 flex flex-col sm:flex-row items-center"
-    >
-      <img
-        src="/assets/gv-dev-sticker.webp"
-        alt="George Vagdas sticker"
-        class="h-40 w-40 flex-shrink-0"
-      />
-      <h2
-        class="text-black mt-4 sm:mt-0 sm:ml-4 flex-grow text-center sm:text-left cursor-default"
+    <a href="/about" class="col-span-2 sm:col-span-3 lg:col-span-2 relative">
+      <div
+        class="bg-white shadow rounded-3xl p-4 sm:p-6 min-h-36 sm:min-h-60 flex flex-col sm:flex-row items-center transform transition-transform hover:scale-103"
       >
-        Hello, I'm <span class="bento-name">George</span>, a Front-End
-        Developer, originally from Greece 🇬🇷 and I am currently based in 📍
-        Athens.
-      </h2>
-    </div>
+        <img
+          src="/assets/gv-dev-sticker.webp"
+          alt="George Vagdas sticker"
+          class="h-32 w-32 flex-shrink-0"
+        />
+        <h2
+          class="text-black mt-4 sm:mt-0 sm:ml-4 flex-grow text-center sm:text-left mb-4 sm:mb-0"
+        >
+          Hello, I'm <span class="bento-name">George</span>, a Front-End
+          Developer, originally from Greece 🇬🇷 and I am currently based in 📍
+          Athens.
+        </h2>
+        <div class="absolute bottom-2 right-2 sm:bottom-4 sm:right-4">
+          <div
+            class="w-8 h-8 bg-neon-green rounded-full flex items-center justify-center shadow-md transition-transform transform hover:scale-110 hover:bg-neon-orange"
+          >
+            <svg
+              class="w-4 h-4 sm:w-5 sm:h-5 text-white transform rotate-315 transition-colors duration-200 hover:text-black"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
 
     <!-- Bento Box 2: Small Box -->
     <div
-      class="bg-neon-pink shadow-lg rounded-3xl p-6 col-span-1 sm:col-span-2 lg:col-span-1 min-h-44 sm:min-h-60"
+      class="bg-neon-pink shadow-lg rounded-3xl p-4 col-span-1 sm:col-span-2 lg:col-span-1 min-h-36 sm:min-h-60"
     >
       <h2
-        class="bento-project-text mb-6 text-center text-white text-3xl font-bold"
+        class="bento-project-text mb-6 text-center text-white text-2xl font-bold"
       >
         Tech Stack
       </h2>
       <div
-        class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2"
+        class="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2"
       >
         {
           techStack
             .slice(0, 4)
             .map((tech, index) => (
               <div
-                class={`${tech.bg} ${tech.text} flex items-center justify-center px-3 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center cursor-default sm:hidden`}
+                class={`${tech.bg} ${tech.text} flex items-center justify-center px-2 py-2 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center cursor-default sm:hidden`}
               >
                 {tech.name}
               </div>
@@ -62,7 +83,7 @@ const techStack = [
         {
           techStack.map((tech) => (
             <div
-              class={`${tech.bg} ${tech.text} flex items-center justify-center px-3 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center cursor-default hidden sm:flex`}
+              class={`${tech.bg} ${tech.text} flex items-center justify-center px-2 py-2 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center cursor-default hidden sm:flex`}
             >
               {tech.name}
             </div>
@@ -73,13 +94,13 @@ const techStack = [
 
     <!-- Bento Box 3: Large Vertical Box -->
     <div
-      class="bg-neon-orange shadow rounded-3xl p-6 col-span-1 sm:col-span-1 lg:col-span-1 sm:row-span-2 min-h-44 sm:min-h-60 relative overflow-hidden"
+      class="bg-neon-orange shadow rounded-3xl p-4 col-span-1 sm:col-span-1 lg:col-span-1 sm:row-span-2 min-h-36 sm:min-h-60 relative overflow-hidden"
     >
       <div class="flex flex-col justify-between items-center h-full space-y-4">
         <img
           src="/assets/karadimas.webp"
           alt="Ioannis Karadimas"
-          class="h-40 w-full sm:h-60 lg:h-80 rounded-3xl shadow-lg"
+          class="h-32 w-full sm:h-60 lg:h-64 rounded-3xl shadow-lg"
         />
         <h2
           class="bento-project-text text-white text-center lg:pt-2 animate-fade-in-down cursor-default"
@@ -93,7 +114,7 @@ const techStack = [
           >
             <span class="font-semibold text-sm sm:text-base"> Go to Work </span>
             <svg
-              class="ml-2 w-4 h-4 sm:w-5 sm:h-5 text-neon-orange"
+              class="ml-2 w-4 h-4 sm:w-5 sm:h-5 text-neon-orange rotate-315"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -112,13 +133,13 @@ const techStack = [
 
     <!-- Bento Box 4: Large Vertical Box -->
     <div
-      class="bg-neon-orange shadow rounded-3xl p-6 col-span-2 sm:col-span-1 lg:col-span-1 row-span-2 min-h-44 sm:min-h-60"
+      class="bg-neon-orange shadow rounded-3xl p-4 col-span-2 sm:col-span-1 lg:col-span-1 row-span-2 min-h-36 sm:min-h-60"
     >
       <div class="flex flex-col justify-between items-center h-full space-y-4">
         <img
           src="/assets/glyfada-rent-a-bike.webp"
           alt="Glyfada Rent a Bike"
-          class="h-40 w-full sm:h-60 lg:h-80 rounded-3xl shadow-lg"
+          class="h-32 w-full sm:h-60 lg:h-64 rounded-3xl shadow-lg"
         />
         <h2
           class="bento-project-text text-white text-center lg:pt-2 animate-fade-in-down cursor-default"
@@ -132,7 +153,7 @@ const techStack = [
           >
             <span class="font-semibold text-sm sm:text-base"> Go to Work </span>
             <svg
-              class="ml-2 w-4 h-4 sm:w-5 sm:h-5 text-neon-orange"
+              class="ml-2 w-4 h-4 sm:w-5 sm:h-5 text-neon-orange rotate-315"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -156,12 +177,12 @@ const techStack = [
       class="col-span-2 sm:col-span-1 lg:col-span-1"
     >
       <div
-        class="bg-linkedin-blue shadow rounded-3xl p-6 min-h-60 sm:min-h-72 flex justify-center items-center transform transition-transform hover:scale-105 bento-box"
+        class="bg-linkedin-blue shadow rounded-3xl p-4 min-h-60 sm:min-h-60 flex justify-center items-center transform transition-transform hover:scale-105 bento-box"
       >
         <img
           src="/assets/svg/linkedin-logo.svg"
           alt="LinkedIn logo"
-          class="h-20 w-20"
+          class="h-16 w-16"
         />
       </div>
     </a>
@@ -173,19 +194,19 @@ const techStack = [
       class="col-span-1 sm:col-span-2 lg:col-span-1"
     >
       <div
-        class="bg-github-black shadow rounded-3xl p-6 min-h-60 sm:min-h-72 flex justify-center items-center transform transition-transform hover:scale-105 bento-box"
+        class="bg-github-black shadow rounded-3xl p-4 min-h-60 sm:min-h-60 flex justify-center items-center transform transition-transform hover:scale-105 bento-box"
       >
         <img
           src="/assets/svg/github-logo.svg"
           alt="Github logo"
-          class="h-20 w-20"
+          class="h-16 w-16"
         />
       </div>
     </a>
 
     <!-- Bento Box 7: Large Horizontal Box -->
     <div
-      class="bg-neon-orange shadow-lg rounded-3xl p-6 col-span-1 sm:col-span-2 lg:col-span-2 min-h-44 sm:min-h-60 relative overflow-hidden"
+      class="bg-neon-orange shadow-lg rounded-3xl p-4 col-span-1 sm:col-span-2 lg:col-span-2 min-h-36 sm:min-h-60 relative overflow-hidden"
     >
       <div
         class="absolute inset-0 p-4 flex flex-col lg:flex-row justify-between items-start space-y-4 lg:space-y-0 lg:space-x-4"
@@ -214,7 +235,7 @@ const techStack = [
                 Go to Work
               </span>
               <svg
-                class="ml-2 w-4 h-4 sm:w-5 sm:h-5 text-neon-orange"
+                class="ml-2 w-4 h-4 sm:w-5 sm:h-5 text-neon-orange rotate-315"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -234,9 +255,9 @@ const techStack = [
 
     <!-- Bento Box 8: Small Box -->
     <div
-      class="bg-neon-green shadow-lg rounded-3xl p-6 col-span-2 sm:col-span-1 lg:col-span-1 min-h-44 sm:min-h-60 flex flex-col justify-center items-center text-center"
+      class="bg-neon-green shadow-lg rounded-3xl p-4 col-span-2 sm:col-span-1 lg:col-span-1 min-h-36 sm:min-h-60 flex flex-col justify-center items-center text-center"
     >
-      <h2 class="bento-project-text text-white text-3xl font-bold mb-4">
+      <h2 class="bento-project-text text-white text-2xl font-bold mb-4">
         Contact Me
       </h2>
       <p class="text-white text-lg mb-6">
