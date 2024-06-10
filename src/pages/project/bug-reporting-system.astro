@@ -1,0 +1,31 @@
+---
+import Project from "../../layouts/project.astro";
+
+const techStack = [
+  "This project was generated with Angular CLI version 7.3.9.",
+  "It is utilizing a Heroku server.",
+];
+
+const features = [
+  "Add bugs and their details.",
+  "Get bug data from a Heroku server.",
+  "Track bug resolving status.",
+  "Facilitate debugging process.",
+];
+
+const website = {
+  url: "",
+  displayText: "",
+};
+---
+
+<Project
+  title="Bug Reporting System"
+  description="A bug and issue tracking tool."
+  tags={["design", "dev", "tool"]}
+  img="/assets/bug-reporting-system.webp"
+  parentURL="/projects"
+  techStack={techStack}
+  features={features}
+  website={website}
+/>

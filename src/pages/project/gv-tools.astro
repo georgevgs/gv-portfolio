@@ -1,0 +1,32 @@
+---
+import Project from "../../layouts/project.astro";
+
+const techStack = [
+  "This project was generated with Angular CLI version 14.2.10.",
+  "It is deployed on Netlify.",
+];
+
+const features = [
+  "Generating email and password data.",
+  "Encrypt and Decrypt text using AES symmetric block cipher.",
+  "Calculate working days in a month, excluding any Greek holiday.",
+  "Get the number of days needed for our hybrid work model.",
+  "Add and calculate office days.",
+];
+
+const website = {
+  url: "https://gv-tools.vercel.app",
+  displayText: "gvtools.work",
+};
+---
+
+<Project
+  title="GV Tools"
+  description="An app to help my teammates and me facilitate our everyday tasks and life."
+  tags={["tool", "dev", "functionality"]}
+  img="/assets/gv-tools.webp"
+  parentURL="/projects"
+  techStack={techStack}
+  features={features}
+  website={website}
+/>
