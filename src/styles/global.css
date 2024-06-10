@@ -106,23 +106,26 @@
 }
 
 @font-face {
-  font-family: 'Hubot Sans';
-  src:
-    url('/fonts/hubot-sans/Hubot-Sans.woff2') format('woff2 supports variations'),
-    url('/fonts/hubot-sans/Hubot-Sans.woff2') format('woff2-variations');
-  font-weight: 200 400 900;
-  font-stretch: 75% 125%;
+  font-family: "Silka Regular";
+  src: url("/fonts/silka/silka-regular-webfont.eot");
+  src: url("/fonts/silka/silka-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/silka/silka-regular-webfont.woff2") format("woff2"),
+    url("/fonts/silka/silka-regular-webfont.woff") format("woff"),
+    url("/fonts/silka/silka-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Press Start';
-  src: url('/fonts/press-start/PressStart2P-Regular.ttf') format('truetype');
-  font-weight: 400;
+  font-family: "Moranga Bold";
+  src: url("/fonts/moranga/moranga-bold.otf") format("opentype");
+  font-weight: bold;
   font-style: normal;
 }
 
 html {
-  font-family: 'Hubot Sans';
+  font-family: "Silka Regular";
 }
 
 /* TOGGLE  */
@@ -254,6 +257,7 @@ h1 {
 }
 
 .title {
+  font-family: "Moranga Bold";
   font-weight: bold;
   padding-top: 1rem;
   padding-bottom: 1rem;

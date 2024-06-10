@@ -1,0 +1,44 @@
+.bento-name {
+  font-family: "Moranga Bold";
+  font-size: 33px;
+}
+
+.bento-project-text {
+  font-family: "Moranga Bold";
+  font-size: 33px;
+  color: white;
+}
+
+@media (max-width: 640px) {
+  .bento-project-text {
+    font-size: 24px;
+  }
+}
+
+.animate-fade-in-down {
+  animation: fade-in-down 2.5s ease-out;
+}
+
+.animate-fade-in {
+  animation: fade-in 2s ease-in-out;
+}
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
