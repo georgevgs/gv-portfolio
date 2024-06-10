@@ -41,7 +41,7 @@ All commands are run from the root of the project, from a terminal:
     │   ├── layouts            # Layout components
     │   └── pages              # Pages of the site
     │   └── styles             # Global styles and Tailwind CSS setup
-    │   └── utils/             # Utility functions
+    │   └── utils              # Utility functions
     ├── astro.config.mjs       # Astro configuration
     ├── tailwind.config.js     # Tailwind CSS configuration
     ├── package.json           # Project metadata and dependencies
