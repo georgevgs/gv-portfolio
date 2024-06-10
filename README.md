@@ -16,14 +16,14 @@ bun install
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                               |
-|---------------------------|------------------------------------------------------|
-| `bun install`             | Installs dependencies                                |
-| `bun run dev`             | Starts local dev server at `localhost:4321`          |
-| `bun run build`           | Build your production site to `./dist/`              |
-| `bun run preview`         | Preview your build locally, before deploying         |
-| `bun run astro ...`       | Run CLI commands like `astro add`, `astro check`     |
-| `bun run astro --help`    | Get help using the Astro CLI                         |
+| Command                | Action                                           |
+| ---------------------- | ------------------------------------------------ |
+| `bun install`          | Installs dependencies                            |
+| `bun run dev`          | Starts local dev server at `localhost:4321`      |
+| `bun run build`        | Build your production site to `./dist/`          |
+| `bun run preview`      | Preview your build locally, before deploying     |
+| `bun run astro ...`    | Run CLI commands like `astro add`, `astro check` |
+| `bun run astro --help` | Get help using the Astro CLI                     |
 
 ## 🛠️ Built With
 
@@ -35,13 +35,17 @@ All commands are run from the root of the project, from a terminal:
 ## 📁 Project Structure
 
     .
-    ├── build                   # Compiled files (alternatively `dist`)
-    ├── docs                    # Documentation files (alternatively `doc`)
-    ├── src                     # Source files (alternatively `lib` or `app`)
-    ├── test                    # Automated tests (alternatively `spec` or `tests`)
-    ├── tools                   # Tools and utilities
-    ├── LICENSE
-    └── README.md
+    ├── public                 # Static assets
+    ├── src
+    │   ├── components         # Reusable components
+    │   ├── layouts            # Layout components
+    │   └── pages              # Pages of the site
+    │   └── styles             # Global styles and Tailwind CSS setup
+    │   └── utils/             # Utility functions
+    ├── astro.config.mjs       # Astro configuration
+    ├── tailwind.config.js     # Tailwind CSS configuration
+    ├── package.json           # Project metadata and dependencies
+    └── README.md              # Project documentation
 
 ## 🌟 Features
 
