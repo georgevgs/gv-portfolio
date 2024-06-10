@@ -15,8 +15,8 @@ export default {
         103: "1.03",
       },
       rotate: {
-        '315': '315deg',
-      }
+        315: "315deg",
+      },
     },
   },
   plugins: [],

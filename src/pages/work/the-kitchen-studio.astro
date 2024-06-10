@@ -1,0 +1,31 @@
+---
+import Project from "../../layouts/project.astro";
+
+const techStack = [
+  "This website is build using Astro v3.",
+  "It is deployed on netlify.",
+];
+
+const features = [
+  "Displaying projects.",
+  "Categories.",
+  "Get customer's contact data.",
+  "Website Localization.",
+];
+
+const website = {
+  url: "https://thekitchenstudio.gr",
+  displayText: "thekitchenstudio.gr",
+};
+---
+
+<Project
+  title="The Kitchen Studio"
+  description="A Kitchen Furniture website."
+  tags={["custom", "business", "website"]}
+  img="/assets/the-kitchen-studio.webp"
+  parentURL="/work"
+  techStack={techStack}
+  features={features}
+  website={website}
+/>

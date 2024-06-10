@@ -1,0 +1,32 @@
+---
+import Project from "../../layouts/project.astro";
+
+const techStack = [
+  "This website is build using Opencart.",
+  "It is deployed on a2hosting.",
+];
+
+const features = [
+  "Displaying products.",
+  "Categories and filtering.",
+  "Calculate shipping and tax.",
+  "Get customer's orders and data.",
+  "Payment Gateway.",
+];
+
+const website = {
+  url: "https://lowandflow.gr",
+  displayText: "lowandflow.gr",
+};
+---
+
+<Project
+  title="Low and Flow"
+  description="A local Bike shop website."
+  tags={["ecommerce", "business", "website"]}
+  img="/assets/low-and-flow.webp"
+  parentURL="/work"
+  techStack={techStack}
+  features={features}
+  website={website}
+/>

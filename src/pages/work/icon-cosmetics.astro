@@ -1,0 +1,32 @@
+---
+import Project from "../../layouts/project.astro";
+
+const techStack = [
+  "This website is build using Wordpress.",
+  "It is deployed on hostinger.",
+];
+
+const features = [
+  "Displaying products.",
+  "Categories and filtering.",
+  "Calculate shipping and tax.",
+  "Get customer's orders and data.",
+  "Payment Gateway.",
+];
+
+const website = {
+  url: "https://icon-cosmetics.gr",
+  displayText: "icon-cosmetics.gr",
+};
+---
+
+<Project
+  title="Icon Cosmetics"
+  description="A local perfume and cosmetics website."
+  tags={["ecommerce", "business", "website"]}
+  img="/assets/icon-cosmetics.webp"
+  parentURL="/work"
+  techStack={techStack}
+  features={features}
+  website={website}
+/>

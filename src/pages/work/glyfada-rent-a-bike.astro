@@ -1,0 +1,31 @@
+---
+import Project from "../../layouts/project.astro";
+
+const techStack = [
+  "This website is build using Astro v4.",
+  "It is deployed on Vercel.",
+];
+
+const features = [
+  "Displaying available bicycles.",
+  "Booking engine.",
+  "Get customer's contact data.",
+  "Theme toggle.",
+];
+
+const website = {
+  url: "https://glyfadarentabike.gr",
+  displayText: "glyfadarentabike.gr",
+};
+---
+
+<Project
+  title="Glyfada Rent a Bike"
+  description="A bicycle rental website."
+  tags={["custom", "business", "website"]}
+  img="/assets/glyfada-rent-a-bike.webp"
+  parentURL="/work"
+  techStack={techStack}
+  features={features}
+  website={website}
+/>

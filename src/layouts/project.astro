@@ -3,184 +3,53 @@ import MainHead from "../components/MainHead.astro";
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
 import type { Project } from "../types";
+import "../styles/project.css";
 
-interface Props {
-  content: Project;
-}
-
-const { content } = Astro.props;
+const {
+  title,
+  description,
+  tags,
+  img,
+  parentURL,
+  techStack,
+  features,
+  website,
+} = Astro.props as Project;
 ---
 
 <html lang="en">
   <head>
-    <MainHead title={content.title} description={content.description} />
-    <style>
-      .hero {
-        padding: 8rem;
-        display: flex;
-        background-color: var(--t-fg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 25vw;
-        color: white;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border-radius: 1.5rem;
-        box-shadow: var(--shadow-md);
-        position: relative; /* Ensure hero section positions its children relative to it */
-        text-align: center;
-      }
-
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        border-radius: 1.5rem;
-        z-index: 1; /* Ensure the overlay is above the background but below the text */
-      }
-
-      .title {
-        color: var(--c-blue);
-        font-family: "Moranga Bold";
-        font-size: var(--f-u10);
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 0.0625em;
-        position: relative; /* Ensure the text is above the overlay */
-        z-index: 2; /* Ensure the title is above the overlay */
-      }
-
-      .tag {
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-        text-transform: uppercase;
-      }
-
-      .tag:nth-of-type(1n) {
-        color: var(--c-green);
-      }
-      .tag:nth-of-type(2n) {
-        color: var(--c-blue);
-      }
-      .tag:nth-of-type(3n) {
-        color: var(--c-blue);
-      }
-      .tag:nth-of-type(4n) {
-        color: var(--c-pink);
-      }
-
-      .leadIn {
-        padding-top: 4em;
-        color: var(--t-bg);
-        background-color: var(--t-fg);
-        text-align: center;
-      }
-
-      .tagline {
-        font-weight: 300;
-        font-size: var(--f-u3);
-        line-height: 1.5;
-      }
-
-      .content {
-        font-size: var(--f-u1);
-        line-height: 2.2;
-        max-width: 50em;
-        margin: auto;
-      }
-
-      .wrapper {
-        padding-bottom: 4em;
-        margin-bottom: 4em;
-      }
-
-      footer {
-        text-align: center;
-        margin-top: 3rem;
-      }
-
-      .tech-stack {
-        margin-top: 2rem;
-        font-size: 1.25rem;
-        line-height: 1.75;
-        color: var(--t-fg);
-      }
-
-      .tech-stack h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        color: var(--c-blue);
-      }
-
-      .tech-stack ul {
-        list-style: none;
-        padding: 0;
-      }
-
-      .tech-stack ul li {
-        margin-bottom: 0.75rem;
-        padding-left: 1.5rem;
-        position: relative;
-      }
-
-      .tech-stack ul li::before {
-        content: "•";
-        color: var(--c-blue);
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-
-      .tech-stack a {
-        color: var(--c-blue);
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-
-      .tech-stack a:hover {
-        color: var(--c-dark-blue);
-      }
-    </style>
+    <MainHead title={title} description={description} />
   </head>
   <body>
     <Nav />
-    <header style={`background-image:url(${content.img})`} class="hero">
+    <header style={`background-image:url(${img})`} class="hero">
       <div class="overlay"></div>
-      <h1 class="title">{content.title}</h1>
+      <h1 class="title">{title}</h1>
     </header>
     <div class="leadIn">
       <div class="wrapper">
-        {content.tags.map((t) => <span class="tag">{t}</span>)}
-        <h3 class="tagline">{content.description}</h3>
+        {tags.map((t) => <span class="tag">{t}</span>)}
+        <h3 class="tagline">{description}</h3>
       </div>
     </div>
     <div class="wrapper">
       <div class="content tech-stack">
         <h3>Tech Stack:</h3>
         <ul>
-          <li>This website is built using Astro v4.</li>
-          <li>It is deployed on Vercel.</li>
+          {techStack.map((item) => <li>{item}</li>)}
         </ul>
         <h3>Features:</h3>
         <ul>
-          <li>Displaying available bicycles.</li>
-          <li>Booking engine.</li>
-          <li>Get customer's contact data.</li>
-          <li>Theme toggle.</li>
+          {features.map((item) => <li>{item}</li>)}
         </ul>
         <h3>Website:</h3>
-        <a href="https://glyfadarentabike.gr" target="_blank"
-          >glyfadarentabike.gr</a
-        >
+        <a href={website.url} target="_blank">{website.displayText}</a>
       </div>
     </div>
-    <footer>
-      <a href={content.parentURL} class="button">View More</a>
-    </footer>
+    <!-- <div class="center">
+      <a href={parentURL} class="button"> View More </a>
+    </div> -->
     <Footer />
   </body>
 </html>

@@ -1,0 +1,30 @@
+---
+import Project from "../../layouts/project.astro";
+
+const techStack = [
+  "This website is build using Astro v4.",
+  "It is deployed on netlify.",
+];
+
+const features = [
+  "Displaying projects.",
+  "Categories.",
+  "Get customer's contact data.",
+];
+
+const website = {
+  url: "https://ikaradimas.gr",
+  displayText: "ikaradimas.gr",
+};
+---
+
+<Project
+  title="Karadimas"
+  description="A Bath and Tiles local shop's website."
+  tags={["custom", "business", "website"]}
+  img="/assets/karadimas.webp"
+  parentURL="/work"
+  techStack={techStack}
+  features={features}
+  website={website}
+/>
