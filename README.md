@@ -7,9 +7,9 @@ Welcome to my personal portfolio! This project showcases my work as a web develo
 To get started with the project, clone the repository and install the dependencies.
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-npm install
+git clone https://github.com/georgevgs/gv-portfolio.git
+cd gv-portfolio
+bun install
 ```
 
 ## 🧞 Commands
@@ -18,12 +18,12 @@ All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                               |
 |---------------------------|------------------------------------------------------|
-| `npm install`             | Installs dependencies                                |
-| `npm run dev`             | Starts local dev server at `localhost:3000`          |
-| `npm run build`           | Build your production site to `./dist/`              |
-| `npm run preview`         | Preview your build locally, before deploying         |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`     |
-| `npm run astro --help`    | Get help using the Astro CLI                         |
+| `bun install`             | Installs dependencies                                |
+| `bun run dev`             | Starts local dev server at `localhost:4321`          |
+| `bun run build`           | Build your production site to `./dist/`              |
+| `bun run preview`         | Preview your build locally, before deploying         |
+| `bun run astro ...`       | Run CLI commands like `astro add`, `astro check`     |
+| `bun run astro --help`    | Get help using the Astro CLI                         |
 
 ## 🛠️ Built With
 
@@ -36,7 +36,7 @@ All commands are run from the root of the project, from a terminal:
 
 Here's a quick overview of the project's structure:
 
-/
+.
 ├── public/                # Static assets
 ├── src/
 │   ├── components/        # Reusable components
