@@ -1,65 +1,53 @@
-# George Vagdas's Portfolio
+# George Vagdas — Portfolio
 
-Welcome to my personal portfolio! This project showcases my work as a web developer, including projects built with Astro, Tailwind CSS, and more. Explore to see my skills, projects, and professional journey.
+My personal portfolio site, built with Astro and Tailwind CSS. It's where I showcase my work, skills, and a bit about who I am.
 
-## 🚀 Getting Started
+Live at: [georgevagdas.com](https://georgevagdas.com)
 
-To get started with the project, clone the repository and install the dependencies.
+## Getting started
+
+Clone the repo, install dependencies, and spin up the dev server:
 
 ```bash
 git clone https://github.com/georgevgs/gv-portfolio.git
 cd gv-portfolio
 bun install
+bun run dev
 ```
 
-## 🧞 Commands
+The dev server starts at `http://localhost:4321`.
 
-All commands are run from the root of the project, from a terminal:
+## Commands
 
-| Command                | Action                                           |
-| ---------------------- | ------------------------------------------------ |
-| `bun install`          | Installs dependencies                            |
-| `bun run dev`          | Starts local dev server at `localhost:4321`      |
-| `bun run build`        | Build your production site to `./dist/`          |
-| `bun run preview`      | Preview your build locally, before deploying     |
-| `bun run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `bun run astro --help` | Get help using the Astro CLI                     |
+| Command            | What it does                              |
+| ------------------ | ----------------------------------------- |
+| `bun run dev`      | Start local dev server at `localhost:4321` |
+| `bun run build`    | Build the site to `./dist/`               |
+| `bun run preview`  | Preview the production build locally      |
 
-## 🛠️ Built With
+## Project structure
 
-- **Astro**: A modern static site generator.
-- **Tailwind CSS**: A utility-first CSS framework.
-- **JavaScript/TypeScript**: For scripting and type safety.
-- **HTML & CSS**: The backbone of web development.
+```
+.
+├── public/              # Static assets (images, fonts, etc.)
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── layouts/         # Page layout templates
+│   ├── pages/           # Routes — each file becomes a page
+│   ├── scripts/         # Client-side scripts
+│   ├── styles/          # Global styles and Tailwind setup
+│   └── types.ts         # Shared TypeScript types
+├── astro.config.mjs     # Astro config
+├── tailwind.config.js   # Tailwind config
+└── package.json
+```
 
-## 📁 Project Structure
+## Stack
 
-    .
-    ├── public                 # Static assets
-    ├── src
-    │   ├── components         # Reusable components
-    │   ├── layouts            # Layout components
-    │   └── pages              # Pages of the site
-    │   └── styles             # Global styles and Tailwind CSS setup
-    │   └── utils              # Utility functions
-    ├── astro.config.mjs       # Astro configuration
-    ├── tailwind.config.js     # Tailwind CSS configuration
-    ├── package.json           # Project metadata and dependencies
-    └── README.md              # Project documentation
+- [Astro](https://astro.build) — static site framework
+- [Tailwind CSS](https://tailwindcss.com) — utility-first styling
+- [Vercel](https://vercel.com) — hosting and analytics
 
-## 🌟 Features
+## License
 
-- Responsive design for mobile and desktop
-- Fast performance with Astro's static site generation
-- Styled with Tailwind CSS for modern UI
-- Modular and reusable components
-
-## 📜 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## ✨ Acknowledgments
-
-- Astro
-- Tailwind CSS
-- Inspiration from various portfolios and design resources.
+MIT
