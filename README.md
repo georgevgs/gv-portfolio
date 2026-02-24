@@ -2,7 +2,7 @@
 
 My personal portfolio site, built with Astro and Tailwind CSS. It's where I showcase my work, skills, and a bit about who I am.
 
-Live at: [georgevagdas.com](https://georgevagdas.com)
+Live at: [vagdas.eu](https://vagdas.eu)
 
 ## Getting started
 
