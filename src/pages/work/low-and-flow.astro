@@ -2,16 +2,21 @@
 import Project from "../../layouts/project.astro";
 
 const techStack = [
-  "This website is build using Opencart.",
-  "It is deployed on a2hosting.",
+  "WooCommerce",
+  "WordPress",
+  "PHP",
+  "MySQL",
+  "Redis",
+  "LiteSpeed",
+  "Hosted on Hetzner",
 ];
 
 const features = [
-  "Displaying products.",
-  "Categories and filtering.",
-  "Calculate shipping and tax.",
-  "Get customer's orders and data.",
-  "Payment Gateway.",
+  "Full product catalog with categories and filtering.",
+  "Shopping cart with shipping and tax calculation.",
+  "Integrated payment gateway for online orders.",
+  "Customer account management and order history.",
+  "Admin panel for inventory and order management.",
 ];
 
 const website = {
@@ -22,8 +27,8 @@ const website = {
 
 <Project
   title="Low and Flow"
-  description="A local Bike shop website."
-  tags={["ecommerce", "business", "website"]}
+  description="An e-commerce store for a local bike shop, powered by WooCommerce with Redis caching and LiteSpeed, hosted on Hetzner."
+  tags={["ecommerce", "woocommerce", "php", "redis"]}
   img="/assets/low-and-flow.webp"
   parentURL="/work"
   techStack={techStack}

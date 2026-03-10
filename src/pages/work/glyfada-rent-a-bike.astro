@@ -2,15 +2,19 @@
 import Project from "../../layouts/project.astro";
 
 const techStack = [
-  "This website is build using Astro v4.",
-  "It is deployed on Vercel.",
+  "TypeScript",
+  "Vite",
+  "Tailwind CSS",
+  "Drizzle ORM",
+  "Deployed on Vercel",
 ];
 
 const features = [
-  "Displaying available bicycles.",
-  "Booking engine.",
-  "Get customer's contact data.",
-  "Theme toggle.",
+  "Browse available bicycles with photos and pricing.",
+  "Online booking engine for reservations.",
+  "Contact form for customer inquiries.",
+  "Dark / light theme toggle.",
+  "Responsive design optimized for mobile visitors.",
 ];
 
 const website = {
@@ -21,8 +25,8 @@ const website = {
 
 <Project
   title="Glyfada Rent a Bike"
-  description="A bicycle rental website."
-  tags={["custom", "business", "website"]}
+  description="A bicycle rental website for a shop in Glyfada, Greece. Features an online booking engine and theme toggle."
+  tags={["typescript", "vite", "tailwind", "drizzle"]}
   img="/assets/glyfada-rent-a-bike.webp"
   parentURL="/work"
   techStack={techStack}

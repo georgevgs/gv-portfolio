@@ -107,6 +107,21 @@
   color: var(--c-black);
 }
 
+/* ---- Tech chip group labels ---- */
+.about-chip-group-label {
+  font-family: var(--f-bold);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--c-gray-2);
+  margin: 18px 0 8px;
+}
+
+.about-chip-group-label:first-of-type {
+  margin-top: 0;
+}
+
 /* ---- Tech chips ---- */
 .about-chips {
   display: flex;

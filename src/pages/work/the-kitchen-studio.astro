@@ -2,15 +2,21 @@
 import Project from "../../layouts/project.astro";
 
 const techStack = [
-  "This website is build using Astro v3.",
-  "It is deployed on netlify.",
+  "Astro 5",
+  "Tailwind CSS",
+  "astro-i18next",
+  "Embla Carousel",
+  "MDX Blog",
+  "Deployed on Vercel",
 ];
 
 const features = [
-  "Displaying projects.",
-  "Categories.",
-  "Get customer's contact data.",
-  "Website Localization.",
+  "Bilingual site — Greek (default) and English with i18n routing.",
+  "Product categories: kitchens, bathrooms, doors, wardrobes, tiles, and more.",
+  "Image carousels with autoplay for project showcases.",
+  "Blog section with MDX-powered posts.",
+  "Showroom and contact pages for lead generation.",
+  "Statically generated for fast load times and SEO.",
 ];
 
 const website = {
@@ -21,8 +27,8 @@ const website = {
 
 <Project
   title="The Kitchen Studio"
-  description="A Kitchen Furniture website."
-  tags={["custom", "business", "website"]}
+  description="A bilingual website for a custom kitchen furniture studio in Glyfada, Greece. Statically generated with Astro and deployed on Vercel."
+  tags={["astro", "tailwind", "i18n", "vercel"]}
   img="/assets/the-kitchen-studio.webp"
   parentURL="/work"
   techStack={techStack}

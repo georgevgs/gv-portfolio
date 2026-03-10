@@ -3,11 +3,67 @@ import MainHead from "../components/MainHead.astro";
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
 import "../styles/about.css";
+import {
+  siJavascript, siTypescript, siReact, siAngular, siHtml5, siCss,
+  siTailwindcss, siChakraui, siNodedotjs, siPhp, siNginx,
+  siJest, siCypress, siGit, siVercel, siNetlify, siDigitalocean,
+  siSwagger, siGoogletranslate, siGithub, siGithubactions,
+} from "simple-icons";
+
+const icon = (si: { path: string; hex: string }) =>
+  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#${si.hex}"><path d="${si.path}"/></svg>`;
+
+const a11yIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#0056D2"><path d="M12 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm9 5H3v2h7v4l-2 8h2.5l1.5-6 1.5 6H16l-2-8V9h7V7z"/></svg>`;
+
+const techGroups = [
+  {
+    label: "Front End",
+    items: [
+      { name: "JavaScript", icon: icon(siJavascript) },
+      { name: "TypeScript", icon: icon(siTypescript) },
+      { name: "React", icon: icon(siReact) },
+      { name: "Angular", icon: icon(siAngular) },
+      { name: "HTML5", icon: icon(siHtml5) },
+      { name: "CSS", icon: icon(siCss) },
+      { name: "Tailwind CSS", icon: icon(siTailwindcss) },
+      { name: "Chakra UI", icon: icon(siChakraui) },
+      { name: "Accessibility", icon: a11yIcon },
+      { name: "i18n", icon: icon(siGoogletranslate) },
+    ],
+  },
+  {
+    label: "Back End",
+    items: [
+      { name: "Node.js", icon: icon(siNodedotjs) },
+      { name: "PHP", icon: icon(siPhp) },
+      { name: "REST APIs", icon: icon(siSwagger) },
+      { name: "Nginx", icon: icon(siNginx) },
+    ],
+  },
+  {
+    label: "Testing & Quality",
+    items: [
+      { name: "Jest", icon: icon(siJest) },
+      { name: "Cypress", icon: icon(siCypress) },
+      { name: "Code Reviews", icon: icon(siGithub) },
+      { name: "CI/CD", icon: icon(siGithubactions) },
+    ],
+  },
+  {
+    label: "Cloud & Tools",
+    items: [
+      { name: "Git", icon: icon(siGit) },
+      { name: "Vercel", icon: icon(siVercel) },
+      { name: "Netlify", icon: icon(siNetlify) },
+      { name: "DigitalOcean", icon: icon(siDigitalocean) },
+    ],
+  },
+];
 ---
 
 <html lang="en">
   <head>
-    <MainHead title="About | George Vagdas" description="About George Vagdas — Fullstack Developer" />
+    <MainHead title="About | George Vagdas" description="George Vagdas — Full-Stack Developer specializing in React & TypeScript. 5+ years building performant, scalable web apps with a product-minded approach." />
   </head>
   <body>
     <script>
@@ -22,7 +78,7 @@ import "../styles/about.css";
           <img alt="George Vagdas" src="/assets/gv-dev-sticker.webp" class="about-avatar" />
           <div class="about-hero-text">
             <h1 class="about-name">George Vagdas</h1>
-            <p class="about-role">Fullstack Developer &middot; Athens, Greece 🇬🇷</p>
+            <p class="about-role">Full-Stack Developer &middot; Athens, Greece 🇬🇷</p>
           </div>
         </div>
       </div>
@@ -37,13 +93,22 @@ import "../styles/about.css";
         <h2 class="about-card-label">About</h2>
         <div class="about-bio">
           <p>
-            Fullstack Web developer with a passion for JavaScript, both
-            Frontend and Backend. My interest in web development started back in
-            2013 while still in High School, when I created my first tech news
-            website (tech4greece.gr).
+            Full-Stack Developer with over 5 years of professional experience,
+            specializing in React and TypeScript. I build scalable front-end
+            architectures with reusable component libraries, focusing on
+            performance, accessibility, and clean design patterns. I've shipped
+            products across fintech, SaaS, and e-commerce — from banking SPAs
+            and hospitality platforms to multilingual PWAs.
           </p>
           <p>
-            I've been making websites for about <strong><span id="years"></span> years</strong>
+            I'm product-minded and thrive in cross-functional, Agile teams
+            where I can own features end-to-end — from prototyping with
+            designers to code reviews, testing strategies, and CI/CD pipelines.
+          </p>
+          <p>
+            My journey started back in 2013 when I built my first tech news
+            website (tech4greece.gr) while still in High School. I've been
+            making websites for about <strong><span id="years"></span> years</strong>
             — or <span id="timer"></span> milliseconds and counting.
           </p>
         </div>
@@ -52,21 +117,19 @@ import "../styles/about.css";
       <!-- Technologies card -->
       <div class="about-card">
         <h2 class="about-card-label">Technologies</h2>
-        <div class="about-chips">
-          <span class="about-chip"><i class="fa-brands fa-square-js" style="color: #ecdc67;"></i> JavaScript</span>
-          <span class="about-chip">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="16" height="16">
-              <path fill="#007acc" d="M0 200V0h400v400H0"></path>
-              <path fill="#fff" d="M87.7 200.7V217h52v148h36.9V217h52v-16c0-9 0-16.3-.4-16.5 0-.3-31.7-.4-70.2-.4l-70 .3v16.4l-.3-.1zM321.4 184c10.2 2.4 18 7 25 14.3 3.7 4 9.2 11 9.6 12.8 0 .6-17.3 12.3-27.8 18.8-.4.3-2-1.4-3.6-4-5.2-7.4-10.5-10.6-18.8-11.2-12-.8-20 5.5-20 16 0 3.2.6 5 1.8 7.6 2.7 5.5 7.7 8.8 23.2 15.6 28.6 12.3 41 20.4 48.5 32 8.5 13 10.4 33.4 4.7 48.7-6.4 16.7-22 28-44.3 31.7-7 1.2-23 1-30.5-.3-16-3-31.3-11-40.7-21.3-3.7-4-10.8-14.7-10.4-15.4l3.8-2.4 15-8.7 11.3-6.6 2.6 3.5c3.3 5.2 10.7 12.2 15 14.6 13 6.7 30.4 5.8 39-2 3.7-3.4 5.3-7 5.3-12 0-4.6-.7-6.7-3-10.2-3.2-4.4-9.6-8-27.6-16-20.7-8.8-29.5-14.4-37.7-23-4.7-5.2-9-13.3-11-20-1.5-5.8-2-20-.6-25.7 4.3-20 19.4-34 41-38 7-1.4 23.5-.8 30.4 1l-.2.2z"></path>
-            </svg>
-            TypeScript
-          </span>
-          <span class="about-chip"><i class="fa-brands fa-angular" style="color: #a63937;"></i> Angular</span>
-          <span class="about-chip"><i class="fa-brands fa-react" style="color: #61dbfb;"></i> React</span>
-          <span class="about-chip"><i class="fa-brands fa-node-js" style="color: #98c65d;"></i> Node.js</span>
-          <span class="about-chip"><i class="fa-brands fa-wordpress-simple" style="color: #317196;"></i> WordPress</span>
-          <span class="about-chip"><i class="fa-brands fa-opencart" style="color: #63c1eb;"></i> Opencart</span>
-        </div>
+        {techGroups.map((group) => (
+          <>
+            <h3 class="about-chip-group-label">{group.label}</h3>
+            <div class="about-chips">
+              {group.items.map((item) => (
+                <span class="about-chip">
+                  {item.icon && <Fragment set:html={item.icon} />}
+                  {item.name}
+                </span>
+              ))}
+            </div>
+          </>
+        ))}
       </div>
 
       <!-- CTA card -->

@@ -2,14 +2,22 @@
 import Project from "../../layouts/project.astro";
 
 const techStack = [
-  "This website is build using Astro v4.",
-  "It is deployed on netlify.",
+  "Astro 5",
+  "Tailwind CSS",
+  "Flowbite",
+  "Cloudinary",
+  "Formspree",
+  "Vercel Analytics",
+  "Deployed on Vercel",
 ];
 
 const features = [
-  "Displaying projects.",
-  "Categories.",
-  "Get customer's contact data.",
+  "Product categories: bath fixtures, tiles, and showroom highlights.",
+  "Image carousels powered by Flowbite for completed projects.",
+  "Images hosted on Cloudinary for optimized delivery.",
+  "Contact form via Formspree for lead capture.",
+  "Security headers configured via vercel.json.",
+  "Statically generated for fast load times and strong SEO.",
 ];
 
 const website = {
@@ -20,8 +28,8 @@ const website = {
 
 <Project
   title="Karadimas"
-  description="A Bath and Tiles local shop's website."
-  tags={["custom", "business", "website"]}
+  description="A modern website for a bath and tiles shop in Glyfada, Greece. Built with Astro and Tailwind, with Cloudinary-hosted imagery."
+  tags={["astro", "tailwind", "cloudinary", "vercel"]}
   img="/assets/karadimas.webp"
   parentURL="/work"
   techStack={techStack}
