@@ -7,112 +7,79 @@ import "../styles/about.css";
 
 <html lang="en">
   <head>
-    <MainHead title="About | George Vagdas" description="About George Vagdas" />
+    <MainHead title="About | George Vagdas" description="About George Vagdas — Fullstack Developer" />
   </head>
   <body>
     <script>
       import "../scripts/counter.js";
     </script>
     <Nav />
-    <div class="wrapper">
-      <h1 class="title bento-name">About George</h1>
-      <div class="heroImg">
-        <img
-          alt="desk-setup"
-          width="1400"
-          height="350"
-          src="/assets/desk-setup.webp"
-        />
-      </div>
-      <div class="flex-container">
-        <div class="flex-child sticker">
-          <img alt="gv-dev-sticker" src="/assets/gv-dev-sticker.webp" />
-        </div>
-        <div class="flex-child bio wrapper">
-          <p>
-            🌐 Fullstack Web developer with a passion for JavaScript, both
-            Frontend and Backend. That's what people call Fullstack developer!
-            <br />
-            📅 My interest in web development started back in 2013 (I was still in
-            High School), when I created my first tech news website (tech4greece.gr).
-            <br />I've been making websites for about <span id="years"></span>
-            years - or <span id="timer"></span> milliseconds!
-          </p>
-          <h2>Technologies:</h2>
-          <ul class="skills-list">
-            <li>
-              <i class="fa-brands fa-square-js fa-lg" style="color: #ecdc67;"
-              ></i> JavaScript
-            </li>
-            <li>
-              <span style="display: inline-flex; align-items: center;">
-                <svg
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 400 400"
-                  width="20"
-                  height="20"
-                  style="margin-right: 5px;"
-                >
-                  <style>
-                    .st0 {
-                      fill: #007acc;
-                    }
-                    .st1 {
-                      fill: #fff;
-                    }
-                  </style>
-                  <path class="st0" d="M0 200V0h400v400H0"></path>
-                  <path
-                    class="st1"
-                    d="M87.7 200.7V217h52v148h36.9V217h52v-16c0-9 0-16.3-.4-16.5 0-.3-31.7-.4-70.2-.4l-70 .3v16.4l-.3-.1zM321.4 184c10.2 2.4 18 7 25 14.3 3.7 4 9.2 11 9.6 12.8 0 .6-17.3 12.3-27.8 18.8-.4.3-2-1.4-3.6-4-5.2-7.4-10.5-10.6-18.8-11.2-12-.8-20 5.5-20 16 0 3.2.6 5 1.8 7.6 2.7 5.5 7.7 8.8 23.2 15.6 28.6 12.3 41 20.4 48.5 32 8.5 13 10.4 33.4 4.7 48.7-6.4 16.7-22 28-44.3 31.7-7 1.2-23 1-30.5-.3-16-3-31.3-11-40.7-21.3-3.7-4-10.8-14.7-10.4-15.4l3.8-2.4 15-8.7 11.3-6.6 2.6 3.5c3.3 5.2 10.7 12.2 15 14.6 13 6.7 30.4 5.8 39-2 3.7-3.4 5.3-7 5.3-12 0-4.6-.7-6.7-3-10.2-3.2-4.4-9.6-8-27.6-16-20.7-8.8-29.5-14.4-37.7-23-4.7-5.2-9-13.3-11-20-1.5-5.8-2-20-.6-25.7 4.3-20 19.4-34 41-38 7-1.4 23.5-.8 30.4 1l-.2.2z"
-                  ></path>
-                </svg>
-                <span>TypeScript</span>
-              </span>
-            </li>
-            <li>
-              <i class="fa-brands fa-angular fa-lg" style="color: #a63937;"></i>
-              Angular
-            </li>
-            <li>
-              <i class="fa-brands fa-react fa-lg" style="color: #61dbfb;"></i>
-              React
-            </li>
-            <li>
-              <i class="fa-brands fa-node-js fa-lg" style="color: #98c65d;"></i>
-              Node.js
-            </li>
+    <main class="about-wrapper">
 
-            <li>
-              <i
-                class="fa-brands fa-wordpress-simple fa-lg"
-                style="color: #317196;"></i>
-              WordPress
-            </li>
-            <li>
-              <i class="fa-brands fa-opencart fa-sm" style="color: #63c1eb;"
-              ></i>
-              Opencart
-            </li>
-          </ul>
+      <!-- Hero card -->
+      <div class="about-card about-hero-card">
+        <div class="about-hero">
+          <img alt="George Vagdas" src="/assets/gv-dev-sticker.webp" class="about-avatar" />
+          <div class="about-hero-text">
+            <h1 class="about-name">George Vagdas</h1>
+            <p class="about-role">Fullstack Developer &middot; Athens, Greece 🇬🇷</p>
+          </div>
         </div>
       </div>
-      <div class="container">
-        <a
-          class="button email-link"
-          href="mailto:dev@vagdas.eu"
-          rel="noopener noreferrer"
-          target="_blank">Say Hello</a
-        >
-        <a
-          class="button resume-link"
-          aria-label="Get Resume"
-          href="/assets/pdf/CV_George_Vagdas_2024.pdf"
-          target="_blank">Résumé</a
-        >
+
+      <!-- Desk photo -->
+      <div class="about-card about-photo-card">
+        <img alt="Desk setup" width="1400" height="350" src="/assets/desk-setup.webp" class="about-desk-img" />
       </div>
-    </div>
+
+      <!-- Bio card -->
+      <div class="about-card">
+        <h2 class="about-card-label">About</h2>
+        <div class="about-bio">
+          <p>
+            Fullstack Web developer with a passion for JavaScript, both
+            Frontend and Backend. My interest in web development started back in
+            2013 while still in High School, when I created my first tech news
+            website (tech4greece.gr).
+          </p>
+          <p>
+            I've been making websites for about <strong><span id="years"></span> years</strong>
+            — or <span id="timer"></span> milliseconds and counting.
+          </p>
+        </div>
+      </div>
+
+      <!-- Technologies card -->
+      <div class="about-card">
+        <h2 class="about-card-label">Technologies</h2>
+        <div class="about-chips">
+          <span class="about-chip"><i class="fa-brands fa-square-js" style="color: #ecdc67;"></i> JavaScript</span>
+          <span class="about-chip">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="16" height="16">
+              <path fill="#007acc" d="M0 200V0h400v400H0"></path>
+              <path fill="#fff" d="M87.7 200.7V217h52v148h36.9V217h52v-16c0-9 0-16.3-.4-16.5 0-.3-31.7-.4-70.2-.4l-70 .3v16.4l-.3-.1zM321.4 184c10.2 2.4 18 7 25 14.3 3.7 4 9.2 11 9.6 12.8 0 .6-17.3 12.3-27.8 18.8-.4.3-2-1.4-3.6-4-5.2-7.4-10.5-10.6-18.8-11.2-12-.8-20 5.5-20 16 0 3.2.6 5 1.8 7.6 2.7 5.5 7.7 8.8 23.2 15.6 28.6 12.3 41 20.4 48.5 32 8.5 13 10.4 33.4 4.7 48.7-6.4 16.7-22 28-44.3 31.7-7 1.2-23 1-30.5-.3-16-3-31.3-11-40.7-21.3-3.7-4-10.8-14.7-10.4-15.4l3.8-2.4 15-8.7 11.3-6.6 2.6 3.5c3.3 5.2 10.7 12.2 15 14.6 13 6.7 30.4 5.8 39-2 3.7-3.4 5.3-7 5.3-12 0-4.6-.7-6.7-3-10.2-3.2-4.4-9.6-8-27.6-16-20.7-8.8-29.5-14.4-37.7-23-4.7-5.2-9-13.3-11-20-1.5-5.8-2-20-.6-25.7 4.3-20 19.4-34 41-38 7-1.4 23.5-.8 30.4 1l-.2.2z"></path>
+            </svg>
+            TypeScript
+          </span>
+          <span class="about-chip"><i class="fa-brands fa-angular" style="color: #a63937;"></i> Angular</span>
+          <span class="about-chip"><i class="fa-brands fa-react" style="color: #61dbfb;"></i> React</span>
+          <span class="about-chip"><i class="fa-brands fa-node-js" style="color: #98c65d;"></i> Node.js</span>
+          <span class="about-chip"><i class="fa-brands fa-wordpress-simple" style="color: #317196;"></i> WordPress</span>
+          <span class="about-chip"><i class="fa-brands fa-opencart" style="color: #63c1eb;"></i> Opencart</span>
+        </div>
+      </div>
+
+      <!-- CTA card -->
+      <div class="about-card about-cta-card">
+        <h2 class="about-cta-title">Interested in working together?</h2>
+        <p class="about-cta-sub">Let's build something great. Drop me a line or grab my CV.</p>
+        <div class="about-cta">
+          <a class="btn btn-white" href="mailto:dev@vagdas.eu" rel="noopener noreferrer" target="_blank">Say Hello</a>
+          <a class="btn btn-secondary" href="/assets/pdf/CV_George_Vagdas_2024.pdf" target="_blank">Download CV</a>
+        </div>
+      </div>
+
+    </main>
     <Footer />
   </body>
 </html>

@@ -23,33 +23,47 @@ const {
   </head>
   <body>
     <Nav />
-    <header style={`background-image:url(${img})`} class="hero">
-      <div class="overlay"></div>
-      <h1 class="title">{title}</h1>
-    </header>
-    <div class="leadIn">
-      <div class="wrapper">
-        {tags.map((t) => <span class="tag">{t}</span>)}
-        <h3 class="tagline">{description}</h3>
+    <main class="project-wrapper">
+      <!-- Hero -->
+      <header class="project-hero" style={`background-image:url(${img})`}>
+        <div class="project-hero-overlay"></div>
+        <div class="project-hero-content">
+          <div class="project-tags">
+            {tags.map((t) => <span class="project-tag">{t}</span>)}
+          </div>
+          <h1 class="project-title">{title}</h1>
+          <p class="project-desc">{description}</p>
+        </div>
+      </header>
+
+      <!-- Details -->
+      <div class="project-details">
+        <div class="project-card">
+          <h3 class="project-card-label">Tech Stack</h3>
+          <div class="project-chips">
+            {techStack.map((item) => <span class="project-chip">{item}</span>)}
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3 class="project-card-label">Features</h3>
+          <ul class="project-features">
+            {features.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+
+        {website && website.url && (
+          <div class="project-card">
+            <h3 class="project-card-label">Website</h3>
+            <a href={website.url} target="_blank" rel="noopener" class="project-link">
+              {website.displayText} <span class="project-link-arrow">↗</span>
+            </a>
+          </div>
+        )}
+
+        <a href="/" class="project-back">← Back to Home</a>
       </div>
-    </div>
-    <div class="wrapper">
-      <div class="content tech-stack">
-        <h3>Tech Stack:</h3>
-        <ul>
-          {techStack.map((item) => <li>{item}</li>)}
-        </ul>
-        <h3>Features:</h3>
-        <ul>
-          {features.map((item) => <li>{item}</li>)}
-        </ul>
-        <h3>Website:</h3>
-        <a href={website.url} target="_blank">{website.displayText}</a>
-      </div>
-    </div>
-    <!-- <div class="center">
-      <a href={parentURL} class="button"> View More </a>
-    </div> -->
+    </main>
     <Footer />
   </body>
 </html>

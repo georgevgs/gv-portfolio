@@ -2,48 +2,78 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer>
-  <div class="socials">
-    <a class="social" href="https://linkedin.com/in/gvagdas" aria-label="linkedin" target="_blank">
-      <i class="fa-brands fa-linkedin fa-2xl"></i>
-    </a>
-    <a class="social" href="https://github.com/georgevgs" aria-label="github" target="_blank">
-      <i class="fa-brands fa-github fa-2xl"></i>
-    </a>
-    <a
-      class="social"
-      href="mailto:dev@vagdas.eu"
-      rel="noopener noreferrer"
-      aria-label="mail"
-      target="_blank"
-    >
-      <i class="fa-solid fa-envelope fa-2xl"></i>
-    </a>
+<footer class="site-footer">
+  <div class="footer-rule"></div>
+  <div class="footer-inner">
+    <div class="footer-socials">
+      <a class="footer-social" href="https://linkedin.com/in/gvagdas" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <i class="fa-brands fa-linkedin fa-lg"></i>
+      </a>
+      <a class="footer-social" href="https://github.com/georgevgs" aria-label="GitHub" target="_blank" rel="noopener">
+        <i class="fa-brands fa-github fa-lg"></i>
+      </a>
+      <a class="footer-social" href="mailto:dev@vagdas.eu" aria-label="Email" rel="noopener noreferrer">
+        <i class="fa-solid fa-envelope fa-lg"></i>
+      </a>
+    </div>
+    <p class="footer-copy">&copy; {currentYear} George Vagdas</p>
   </div>
-   &copy; {currentYear} George Vagdas
 </footer>
+
 <style>
-  footer {
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
+  .site-footer {
+    padding: 0 2rem 3rem;
+  }
 
-.socials {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
+  .footer-rule {
+    max-width: 180px;
+    height: 1px;
+    background: rgba(0,0,0,0.07);
+    margin: 0 auto 2rem;
+  }
 
-.social i {
-  color: var(--t-subdue);
-  transition: color 0.2s ease-in-out;
-}
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
 
-.social i:hover {
-  color: var(--c-blue);
-}
+  .footer-socials {
+    display: flex;
+    gap: 14px;
+  }
 
+  .footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition:
+      transform 0.35s var(--ease-spring),
+      color 0.2s ease;
+  }
+
+  .footer-social i {
+    color: var(--c-gray);
+    transition: color 0.2s ease;
+  }
+
+  .footer-social:hover {
+    transform: translateY(-2px);
+  }
+
+  .footer-social:hover i {
+    color: var(--c-blue);
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: var(--c-gray);
+    margin: 0;
+    letter-spacing: 0.01em;
+  }
 </style>

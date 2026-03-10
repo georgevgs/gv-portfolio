@@ -1,22 +1,45 @@
 ---
-
 ---
 
-<nav class="p-8 flex justify-center items-center">
-  <a
-    href="/"
-    class="text-black font-bold text-2xl w-12 h-12 flex justify-center items-center rounded-full border-2 border-black hover:border-[var(--c-blue)] hover:text-[var(--c-blue)] hover-move-down"
-  >
-    &times;
+<nav class="nav-bar">
+  <a href="/" class="nav-close" aria-label="Back to home">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 1L13 13M13 1L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
   </a>
 </nav>
 
 <style>
-  .hover-move-down:hover {
-    transform: translateY(10px);
-    transition: transform 0.3s ease-in-out;
+  .nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    pointer-events: none;
   }
-  .border-2 {
-    border-width: 2px;
+
+  .nav-close {
+    pointer-events: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.05);
+    color: var(--c-black);
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 8px 24px rgba(0,0,0,0.06);
+    transition:
+      transform 0.45s var(--ease-spring),
+      box-shadow 0.3s ease;
+  }
+
+  .nav-close:hover {
+    transform: rotate(90deg) scale(1.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 14px 36px rgba(0,0,0,0.09);
   }
 </style>

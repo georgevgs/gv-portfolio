@@ -1,0 +1,43 @@
+---
+import Project from "../../layouts/project.astro";
+
+const techStack = [
+  "React 19",
+  "TypeScript",
+  "Vite",
+  "Supabase",
+  "shadcn/ui",
+  "ApexCharts",
+  "Zod",
+  "Sentry",
+  "Deployed on Netlify",
+];
+
+const features = [
+  "Log expenses with category, amount, date, and optional receipt photo.",
+  "Set up recurring expenses like rent and subscriptions.",
+  "Tag expenses for finer-grained grouping beyond categories.",
+  "Monthly breakdown and spending charts in the analytics view.",
+  "Set a monthly budget and track progress against it.",
+  "Filter by category, tag, or date range.",
+  "PWA — installs on your phone, syncs across devices.",
+  "English and Greek language support, auto-detected.",
+  "Passwordless auth via email magic links.",
+];
+
+const website = {
+  url: "https://budgard.com",
+  displayText: "budgard.com",
+};
+---
+
+<Project
+  title="Budgard"
+  description="A personal expense tracker PWA that installs like a native app, syncs across devices, and just works."
+  tags={["webapp", "pwa", "finance", "react"]}
+  img="/assets/budgard.webp"
+  parentURL="/work"
+  techStack={techStack}
+  features={features}
+  website={website}
+/>
