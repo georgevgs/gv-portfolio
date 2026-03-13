@@ -1,0 +1,34 @@
+{
+  "title": "Budgard",
+  "description": "A personal expense tracker PWA that installs like a native app, syncs across devices, and just works.",
+  "tags": ["react", "typescript", "pwa", "i18n", "supabase"],
+  "img": "/assets/budgard.webp",
+  "techStack": [
+    "React 19",
+    "TypeScript",
+    "Vite",
+    "Supabase",
+    "shadcn/ui",
+    "Tailwind CSS",
+    "ApexCharts",
+    "react-hook-form + Zod",
+    "Cloudflare Turnstile",
+    "Sentry",
+    "Deployed on Netlify"
+  ],
+  "features": [
+    "Log expenses with category, amount, date, and optional receipt photo.",
+    "Set up recurring expenses like rent and subscriptions.",
+    "Tag expenses for finer-grained grouping beyond categories.",
+    "Monthly breakdown and spending charts in the analytics view.",
+    "Set a monthly budget and track progress against it.",
+    "Filter by category, tag, or date range.",
+    "PWA — installs on your phone, syncs across devices.",
+    "English and Greek language support, auto-detected.",
+    "Passwordless auth via email magic links."
+  ],
+  "website": {
+    "url": "https://budgard.com",
+    "displayText": "budgard.com"
+  }
+}

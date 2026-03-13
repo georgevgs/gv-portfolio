@@ -1,0 +1,21 @@
+{
+  "title": "Rental Hub",
+  "description": "A short-term rental displaying app designed to showcase listings from various sources, providing a centralized platform for exploring rental options.",
+  "tags": ["functionality", "dev", "app"],
+  "img": "/assets/rental-hub.webp",
+  "techStack": [
+    "Angular 14",
+    "TypeScript",
+    "Third-party API Integration"
+  ],
+  "features": [
+    "Display short-term rental listings from multiple sources.",
+    "Fetch and display data from third-party APIs.",
+    "Customizable settings with personal API key support.",
+    "Cookie management for persistent user preferences."
+  ],
+  "website": {
+    "url": "",
+    "displayText": ""
+  }
+}

@@ -1,0 +1,62 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import type { ProjectData } from "../types";
+import "../styles/project.css";
+
+type Props = ProjectData;
+
+const { title, description, tags, img, techStack, features, website } =
+  Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <Nav />
+  <main class="project-wrapper">
+    <header class="project-hero" style={`background-image:url(${img})`}>
+      <div class="project-hero-overlay"></div>
+      <div class="project-hero-content">
+        <div class="project-tags">
+          {tags.map((tag) => <span class="project-tag">{tag}</span>)}
+        </div>
+        <h1 class="project-title">{title}</h1>
+        <p class="project-desc">{description}</p>
+      </div>
+    </header>
+
+    <div class="project-details">
+      <div class="project-card">
+        <h3 class="project-card-label">Tech Stack</h3>
+        <div class="project-chips">
+          {techStack.map((tech) => <span class="project-chip">{tech}</span>)}
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-card-label">Features</h3>
+        <ul class="project-features">
+          {features.map((feature) => <li>{feature}</li>)}
+        </ul>
+      </div>
+
+      {website?.url && (
+        <div class="project-card">
+          <h3 class="project-card-label">Website</h3>
+          <a
+            href={website.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            {website.displayText}
+            <span class="project-link-arrow">&#8599;</span>
+          </a>
+        </div>
+      )}
+
+      <a href="/" class="project-back">&larr; Back to Home</a>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

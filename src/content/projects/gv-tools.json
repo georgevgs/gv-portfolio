@@ -1,0 +1,22 @@
+{
+  "title": "GV Tools",
+  "description": "An app to help my teammates and me facilitate our everyday tasks and life.",
+  "tags": ["tool", "dev", "functionality"],
+  "img": "/assets/gv-tools.webp",
+  "techStack": [
+    "Angular 14",
+    "TypeScript",
+    "Deployed on Netlify"
+  ],
+  "features": [
+    "Generate email and password data.",
+    "Encrypt and decrypt text using AES symmetric block cipher.",
+    "Calculate working days in a month, excluding Greek holidays.",
+    "Track hybrid work model office days.",
+    "Add and calculate office day schedules."
+  ],
+  "website": {
+    "url": "https://gv-tools.vercel.app",
+    "displayText": "gvtools.work"
+  }
+}

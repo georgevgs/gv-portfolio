@@ -1,0 +1,22 @@
+{
+  "title": "Icon Cosmetics",
+  "description": "A local perfume and cosmetics website.",
+  "tags": ["ecommerce", "business", "website"],
+  "img": "/assets/icon-cosmetics.webp",
+  "techStack": [
+    "WordPress",
+    "WooCommerce",
+    "Hosted on Hostinger"
+  ],
+  "features": [
+    "Product catalog with categories and filtering.",
+    "Shipping and tax calculation.",
+    "Customer order management and tracking.",
+    "Integrated payment gateway.",
+    "Responsive storefront design."
+  ],
+  "website": {
+    "url": "https://icon-cosmetics.gr",
+    "displayText": "icon-cosmetics.gr"
+  }
+}

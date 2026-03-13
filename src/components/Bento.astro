@@ -22,7 +22,7 @@ const works = [
     <!-- Hero -->
     <a href="/about" class="cell cell-white cell-hover b-hero">
       <div class="hero-content">
-        <img src="/assets/gv-dev-sticker.webp" alt="George Vagdas" class="hero-avatar" />
+        <img src="/assets/gv-dev-sticker.webp" alt="George Vagdas" width="120" height="120" class="hero-avatar" />
         <div class="hero-text">
           <p class="hero-greeting">Hello, I'm</p>
           <h1 class="hero-name">George Vagdas</h1>
@@ -44,13 +44,13 @@ const works = [
     </div>
 
     <!-- LinkedIn -->
-    <a href="https://linkedin.com/in/gvagdas" target="_blank" rel="noopener" class="cell cell-blue cell-hover b-li social-cell">
+    <a href="https://linkedin.com/in/gvagdas" target="_blank" rel="noopener noreferrer" class="cell cell-blue cell-hover b-li social-cell">
       <img src="/assets/svg/linkedin-logo.svg" alt="LinkedIn" width="48" height="48" class="social-icon" />
       <span class="social-handle">in/gvagdas</span>
     </a>
 
     <!-- GitHub -->
-    <a href="https://github.com/georgevgs" target="_blank" rel="noopener" class="cell cell-dark cell-hover b-gh social-cell">
+    <a href="https://github.com/georgevgs" target="_blank" rel="noopener noreferrer" class="cell cell-dark cell-hover b-gh social-cell">
       <img src="/assets/svg/github-logo.svg" alt="GitHub" width="48" height="48" class="social-icon" />
       <span class="social-handle">georgevgs</span>
     </a>
@@ -62,7 +62,7 @@ const works = [
         class={`cell cell-hover b-w${i} work-cell`}
         style={`--accent: ${w.accent};`}
       >
-        <img src={w.img} alt={w.title} class="work-bg" loading="lazy" />
+        <img src={w.img} alt={w.title} width="600" height="400" class="work-bg" loading="lazy" />
         <div class="work-gradient"></div>
         <div class="work-bottom">
           <h2 class="work-title">{w.title}</h2>

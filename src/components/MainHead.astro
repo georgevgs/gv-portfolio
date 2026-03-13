@@ -1,5 +1,11 @@
 ---
 import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
 const {
   title = "George Vagdas — Full-Stack Developer",
   description = "George Vagdas — Full-Stack Developer specializing in React, TypeScript & Node.js. Building scalable web applications in Athens, Greece.",
@@ -7,39 +13,26 @@ const {
 ---
 
 <meta charset="UTF-8" />
-<meta name="description" property="og:description" content={description} />
+<meta name="description" content={description} />
+<meta property="og:description" content={description} />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <title>{title}</title>
 
 <link rel="icon" type="image/svg+xml" href="/favicon.webp" />
-<!-- Preload for Silka Regular font -->
+
 <link
   rel="preload"
   href="/fonts/silka/silka-regular-webfont.woff2"
   as="font"
-  crossorigin
-/>
-<link
-  rel="preload"
-  href="/fonts/silka/silka-regular-webfont.woff"
-  as="font"
-  crossorigin
-/>
-<link
-  rel="preload"
-  href="/fonts/silka/silka-regular-webfont.ttf"
-  as="font"
+  type="font/woff2"
   crossorigin
 />
 
-<!-- Preload for Moranga Bold font -->
 <link
   rel="preload"
   href="/fonts/moranga/moranga-bold.otf"
   as="font"
+  type="font/opentype"
   crossorigin
 />
-
-<script src="https://kit.fontawesome.com/a0c9def029.js" crossorigin="anonymous"
-></script>

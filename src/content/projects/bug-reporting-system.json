@@ -1,0 +1,21 @@
+{
+  "title": "Bug Reporting System",
+  "description": "A bug and issue tracking tool.",
+  "tags": ["design", "dev", "tool"],
+  "img": "/assets/bug-reporting-system.webp",
+  "techStack": [
+    "Angular 7",
+    "TypeScript",
+    "Heroku"
+  ],
+  "features": [
+    "Add bugs and their details.",
+    "Get bug data from a Heroku server.",
+    "Track bug resolving status.",
+    "Facilitate debugging process."
+  ],
+  "website": {
+    "url": "",
+    "displayText": ""
+  }
+}

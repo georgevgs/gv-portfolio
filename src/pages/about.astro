@@ -1,13 +1,30 @@
 ---
-import MainHead from "../components/MainHead.astro";
-import Footer from "../components/Footer.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/about.css";
 import {
-  siJavascript, siTypescript, siReact, siAngular, siHtml5, siCss,
-  siTailwindcss, siChakraui, siNodedotjs, siPhp, siNginx,
-  siJest, siCypress, siGit, siVercel, siNetlify, siDigitalocean,
-  siSwagger, siGoogletranslate, siGithub, siGithubactions,
+  siJavascript,
+  siTypescript,
+  siReact,
+  siAngular,
+  siHtml5,
+  siCss,
+  siTailwindcss,
+  siChakraui,
+  siNodedotjs,
+  siPhp,
+  siNginx,
+  siJest,
+  siCypress,
+  siGit,
+  siVercel,
+  siNetlify,
+  siDigitalocean,
+  siSwagger,
+  siGoogletranslate,
+  siGithub,
+  siGithubactions,
 } from "simple-icons";
 
 const icon = (si: { path: string; hex: string }) =>
@@ -61,63 +78,70 @@ const techGroups = [
 ];
 ---
 
-<html lang="en">
-  <head>
-    <MainHead title="About | George Vagdas" description="George Vagdas — Full-Stack Developer specializing in React & TypeScript. 5+ years building performant, scalable web apps with a product-minded approach." />
-  </head>
-  <body>
-    <script>
-      import "../scripts/counter.js";
-    </script>
-    <Nav />
-    <main class="about-wrapper">
-
-      <!-- Hero card -->
-      <div class="about-card about-hero-card">
-        <div class="about-hero">
-          <img alt="George Vagdas" src="/assets/gv-dev-sticker.webp" class="about-avatar" />
-          <div class="about-hero-text">
-            <h1 class="about-name">George Vagdas</h1>
-            <p class="about-role">Full-Stack Developer &middot; Athens, Greece 🇬🇷</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Desk photo -->
-      <div class="about-card about-photo-card">
-        <img alt="Desk setup" width="1400" height="350" src="/assets/desk-setup.webp" class="about-desk-img" />
-      </div>
-
-      <!-- Bio card -->
-      <div class="about-card">
-        <h2 class="about-card-label">About</h2>
-        <div class="about-bio">
-          <p>
-            Full-Stack Developer with over 5 years of professional experience,
-            specializing in React and TypeScript. I build scalable front-end
-            architectures with reusable component libraries, focusing on
-            performance, accessibility, and clean design patterns. I've shipped
-            products across fintech, SaaS, and e-commerce — from banking SPAs
-            and hospitality platforms to multilingual PWAs.
-          </p>
-          <p>
-            I'm product-minded and thrive in cross-functional, Agile teams
-            where I can own features end-to-end — from prototyping with
-            designers to code reviews, testing strategies, and CI/CD pipelines.
-          </p>
-          <p>
-            My journey started back in 2013 when I built my first tech news
-            website (tech4greece.gr) while still in High School. I've been
-            making websites for about <strong><span id="years"></span> years</strong>
-            — or <span id="timer"></span> milliseconds and counting.
+<BaseLayout
+  title="About | George Vagdas"
+  description="George Vagdas — Full-Stack Developer specializing in React & TypeScript. 5+ years building performant, scalable web apps with a product-minded approach."
+>
+  <script>
+    import "../scripts/counter.ts";
+  </script>
+  <Nav />
+  <main class="about-wrapper">
+    <div class="about-card about-hero-card">
+      <div class="about-hero">
+        <img
+          alt="George Vagdas"
+          src="/assets/gv-dev-sticker.webp"
+          class="about-avatar"
+        />
+        <div class="about-hero-text">
+          <h1 class="about-name">George Vagdas</h1>
+          <p class="about-role">
+            Full-Stack Developer &middot; Athens, Greece &#127468;&#127479;
           </p>
         </div>
       </div>
+    </div>
 
-      <!-- Technologies card -->
-      <div class="about-card">
-        <h2 class="about-card-label">Technologies</h2>
-        {techGroups.map((group) => (
+    <div class="about-card about-photo-card">
+      <img
+        alt="Desk setup"
+        width="1400"
+        height="350"
+        src="/assets/desk-setup.webp"
+        class="about-desk-img"
+      />
+    </div>
+
+    <div class="about-card">
+      <h2 class="about-card-label">About</h2>
+      <div class="about-bio">
+        <p>
+          Full-Stack Developer with over 5 years of professional experience,
+          specializing in React and TypeScript. I build scalable front-end
+          architectures with reusable component libraries, focusing on
+          performance, accessibility, and clean design patterns. I've shipped
+          products across fintech, SaaS, and e-commerce — from banking SPAs and
+          hospitality platforms to multilingual PWAs.
+        </p>
+        <p>
+          I'm product-minded and thrive in cross-functional, Agile teams where I
+          can own features end-to-end — from prototyping with designers to code
+          reviews, testing strategies, and CI/CD pipelines.
+        </p>
+        <p>
+          My journey started back in 2013 when I built my first tech news
+          website (tech4greece.gr) while still in High School. I've been making
+          websites for about <strong><span id="years"></span> years</strong>
+          — or <span id="timer"></span> milliseconds and counting.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-card">
+      <h2 class="about-card-label">Technologies</h2>
+      {
+        techGroups.map((group) => (
           <>
             <h3 class="about-chip-group-label">{group.label}</h3>
             <div class="about-chips">
@@ -129,20 +153,34 @@ const techGroups = [
               ))}
             </div>
           </>
-        ))}
-      </div>
+        ))
+      }
+    </div>
 
-      <!-- CTA card -->
-      <div class="about-card about-cta-card">
-        <h2 class="about-cta-title">Interested in working together?</h2>
-        <p class="about-cta-sub">Let's build something great. Drop me a line or grab my CV.</p>
-        <div class="about-cta">
-          <a class="btn btn-white" href="mailto:dev@vagdas.eu" rel="noopener noreferrer" target="_blank">Say Hello</a>
-          <a class="btn btn-secondary" href="/assets/pdf/CV_George_Vagdas_2024.pdf" target="_blank">Download CV</a>
-        </div>
+    <div class="about-card about-cta-card">
+      <h2 class="about-cta-title">Interested in working together?</h2>
+      <p class="about-cta-sub">
+        Let's build something great. Drop me a line or grab my CV.
+      </p>
+      <div class="about-cta">
+        <a
+          class="btn btn-white"
+          href="mailto:dev@vagdas.eu"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Say Hello
+        </a>
+        <a
+          class="btn btn-secondary"
+          href="/assets/pdf/CV_George_Vagdas_2024.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Download CV
+        </a>
       </div>
-
-    </main>
-    <Footer />
-  </body>
-</html>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

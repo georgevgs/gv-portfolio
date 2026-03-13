@@ -1,25 +1,21 @@
 ---
-import MainHead from "../components/MainHead.astro";
-import Footer from "../components/Footer.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/404.css";
+
 ---
 
-<html lang="en">
-  <head>
-    <MainHead title="Page Not Found" />
-  </head>
-  <body>
-    <Nav />
-    <div class="error-wrapper">
-      <div class="error-card">
-        <h1 class="error-code">404</h1>
-        <p class="error-message">
-          This page doesn't exist. Let's get you back.
-        </p>
-        <a href="/" class="btn btn-primary">Back to Home</a>
-      </div>
+<BaseLayout title="Page Not Found">
+  <Nav />
+  <div class="error-wrapper">
+    <div class="error-card">
+      <h1 class="error-code">404</h1>
+      <p class="error-message">
+        This page doesn't exist. Let's get you back.
+      </p>
+      <a href="/" class="btn btn-primary">Back to Home</a>
     </div>
-    <Footer />
-  </body>
-</html>
+  </div>
+  <Footer />
+</BaseLayout>

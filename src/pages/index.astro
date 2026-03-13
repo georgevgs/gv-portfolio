@@ -1,16 +1,12 @@
 ---
-import MainHead from "../components/MainHead.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Bento from "../components/Bento.astro";
+
 ---
 
-<html lang="en">
-  <head>
-    <MainHead
-      title="George Vagdas | Fullstack Developer"
-      description="George Vagdas: Fullstack developer skilled in React, TypeScript, NodeJS and Chakra UI. Explore projects and web development expertise."
-    />
-  </head>
-  <body>
-    <Bento />
-  </body>
-</html>
+<BaseLayout
+  title="George Vagdas | Fullstack Developer"
+  description="George Vagdas: Fullstack developer skilled in React, TypeScript, NodeJS and Chakra UI. Explore projects and web development expertise."
+>
+  <Bento />
+</BaseLayout>
