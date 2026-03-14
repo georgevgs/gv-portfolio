@@ -221,6 +221,10 @@
     font-size: 2.1rem;
   }
 
+  .about-photo-card {
+    padding: 0;
+  }
+
   .about-cta-card {
     padding: 32px 22px;
   }
