@@ -1,0 +1,22 @@
+{
+  "title": "GK Vip Transfer",
+  "description": "A tour and transfer service website for VIP Tour Transfer in Kos, Greece. Built with Astro and TypeScript for fast performance and SEO.",
+  "tags": ["typescript", "astro", "tailwind"],
+  "img": "/assets/vip-tour-transfer-kos.webp",
+  "techStack": [
+    "TypeScript",
+    "Astro",
+    "Tailwind CSS",
+    "Deployed on Netlify"
+  ],
+  "features": [
+    "Browse available tours and transfer services.",
+    "Responsive design optimized for mobile visitors.",
+    "Fast performance with Astro static site generation.",
+    "SEO-friendly architecture for local search visibility."
+  ],
+  "website": {
+    "url": "https://viptourtransfer.gr",
+    "displayText": "viptourtransfer.gr"
+  }
+}
