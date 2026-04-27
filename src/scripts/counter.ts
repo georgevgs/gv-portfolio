@@ -26,5 +26,4 @@ function initCounter(): void {
   }
 }
 
-initCounter();
-document.addEventListener("astro:after-swap", initCounter);
+document.addEventListener("astro:page-load", initCounter);
