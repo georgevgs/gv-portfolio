@@ -5,12 +5,10 @@ import Footer from "../components/Footer.astro";
 import type { ProjectData } from "../types";
 import "../styles/project.css";
 
-type Props = ProjectData;
+type Props = ProjectData & { slug: string };
 
-const { title, description, tags, img, techStack, features, website } =
+const { title, description, tags, img, techStack, features, website, slug } =
   Astro.props;
-
-const slug = Astro.url.pathname.replace(/\/$/, "").split("/").pop() ?? "";
 ---
 
 <BaseLayout title={title} description={description}>

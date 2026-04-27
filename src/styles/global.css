@@ -140,3 +140,29 @@ a { color: var(--c-blue); text-decoration: none; }
   margin: 0 auto;
   padding: 0 2rem;
 }
+
+/* ---- Shared entry keyframes ---- */
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(18px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Suppress entry animations after a View Transitions navigation
+   so cards/hero don't re-animate when users hit Back/Forward. */
+body.no-anim .about-card,
+body.no-anim .error-card,
+body.no-anim .cell,
+body.no-anim .project-hero,
+body.no-anim .project-card {
+  animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-card,
+  .error-card,
+  .cell,
+  .project-hero,
+  .project-card {
+    animation: none !important;
+  }
+}

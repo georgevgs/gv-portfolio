@@ -27,11 +27,6 @@
 .about-card:nth-child(4) { animation-delay: 0.18s; }
 .about-card:nth-child(5) { animation-delay: 0.24s; }
 
-@keyframes card-in {
-  from { opacity: 0; transform: translateY(18px) scale(0.97); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
-}
-
 /* ---- Hero card ---- */
 .about-hero-card {
   padding: 38px 36px;

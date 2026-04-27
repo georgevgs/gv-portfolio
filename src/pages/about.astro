@@ -93,6 +93,10 @@ const techGroups = [
           alt="George Vagdas"
           src="/assets/gv-dev-sticker.webp"
           class="about-avatar"
+          width="110"
+          height="110"
+          decoding="async"
+          fetchpriority="high"
         />
         <div class="about-hero-text">
           <h1 class="about-name">George Vagdas</h1>
@@ -110,6 +114,8 @@ const techGroups = [
         height="350"
         src="/assets/desk-setup.webp"
         class="about-desk-img"
+        loading="lazy"
+        decoding="async"
       />
     </div>
 
@@ -163,12 +169,7 @@ const techGroups = [
         Let's build something great. Drop me a line or grab my CV.
       </p>
       <div class="about-cta">
-        <a
-          class="btn btn-white"
-          href="mailto:dev@vagdas.eu"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
+        <a class="btn btn-white" href="mailto:dev@vagdas.eu">
           Say Hello
         </a>
         <a
