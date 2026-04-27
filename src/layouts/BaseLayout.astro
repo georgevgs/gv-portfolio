@@ -16,6 +16,9 @@ const { title, description } = Astro.props;
     <MainHead title={title} description={description} />
     <ClientRouter />
     <Analytics />
+    <script>
+      import "../scripts/counter.ts";
+    </script>
   </head>
   <body>
     <slot />
