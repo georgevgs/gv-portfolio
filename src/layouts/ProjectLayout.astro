@@ -9,12 +9,14 @@ type Props = ProjectData;
 
 const { title, description, tags, img, techStack, features, website } =
   Astro.props;
+
+const slug = Astro.url.pathname.replace(/\/$/, "").split("/").pop() ?? "";
 ---
 
 <BaseLayout title={title} description={description}>
   <Nav />
   <main class="project-wrapper">
-    <header class="project-hero" style={`background-image:url(${img})`}>
+    <header class={`project-hero project-hero--${slug}`} style={`background-image:url(${img})`}>
       <div class="project-hero-overlay"></div>
       <div class="project-hero-content">
         <div class="project-tags">

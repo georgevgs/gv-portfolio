@@ -284,6 +284,10 @@
   transform: scale(1.06);
 }
 
+.b-w3 .work-bg {
+  object-position: top center;
+}
+
 .work-gradient {
   position: absolute;
   inset: 0;
