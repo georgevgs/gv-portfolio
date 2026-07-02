@@ -29,16 +29,17 @@ The dev server starts at `http://localhost:4321`.
 
 ```
 .
-├── public/              # Static assets (images, fonts, etc.)
+├── public/               # Static assets (images, fonts, etc.)
 ├── src/
-│   ├── components/      # Reusable UI components
-│   ├── layouts/         # Page layout templates
-│   ├── pages/           # Routes — each file becomes a page
-│   ├── scripts/         # Client-side scripts
-│   ├── styles/          # Global styles and Tailwind setup
-│   └── types.ts         # Shared TypeScript types
-├── astro.config.mjs     # Astro config
-├── tailwind.config.js   # Tailwind config
+│   ├── components/        # Reusable UI components
+│   ├── content/          # Content collections (work & projects as JSON)
+│   ├── layouts/          # Page layout templates
+│   ├── pages/            # Routes — each file becomes a page
+│   ├── scripts/          # Client-side scripts
+│   ├── styles/           # Global styles and Tailwind setup
+│   ├── content.config.ts # Content collection schemas
+│   └── types.ts          # Shared TypeScript types
+├── astro.config.mjs      # Astro config
 └── package.json
 ```
 

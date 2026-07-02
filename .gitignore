@@ -17,11 +17,16 @@ pnpm-lock.yaml
 
 # editor / IDE
 .idea/
-.vscode/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
+
+# claude code
+.claude/settings.local.json
 
 # vercel
 .vercel/
