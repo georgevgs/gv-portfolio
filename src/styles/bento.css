@@ -472,6 +472,11 @@
   object-position: top center;
 }
 
+/* Low & Flow: the hero headline sits at the left of the screenshot */
+.b-w4 .work-bg {
+  object-position: left center;
+}
+
 .work-gradient {
   position: absolute;
   inset: 0;
