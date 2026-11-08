@@ -1,26 +1,32 @@
 {
   "title": "The Kitchen Studio",
-  "description": "A bilingual website for a custom kitchen furniture studio in Glyfada, Greece. Statically generated with Astro and deployed on Vercel.",
+  "description": "A bilingual website for a custom kitchen furniture studio in Glyfada, Greece. Statically generated with Astro 7 and Tailwind 4, with a dark mode, a bilingual blog and Cloudinary-hosted imagery, deployed on Vercel.",
   "tags": ["astro", "tailwind", "i18n", "vercel"],
   "img": "/assets/the-kitchen-studio.webp",
   "techStack": [
-    "Astro 5",
-    "Tailwind CSS",
-    "astro-i18next",
-    "Embla Carousel",
+    "Astro 7",
+    "Tailwind CSS 4",
+    "TypeScript",
     "MDX Blog",
+    "Embla Carousel",
+    "Cloudinary",
+    "Formspree",
+    "Simple Analytics",
     "Deployed on Vercel"
   ],
   "features": [
-    "Bilingual site — Greek (default) and English with i18n routing.",
-    "Product categories: kitchens, bathrooms, doors, wardrobes, tiles, and more.",
-    "Image carousels with autoplay for project showcases.",
-    "Blog section with MDX-powered posts.",
-    "Showroom and contact pages for lead generation.",
-    "Statically generated for fast load times and SEO."
+    "Bilingual site: Greek (default) and English with i18n routing.",
+    "Full-screen hero carousel with autoplay and quick links to each product category.",
+    "Product categories: kitchens, bathrooms, doors, wardrobes, tiles, and living.",
+    "Completed projects and design studies sections.",
+    "Light and dark mode toggle.",
+    "Blog with bilingual MDX articles.",
+    "Showroom and contact pages with a Formspree lead form.",
+    "Strict CSP headers and a subsetted icon font for fast loads.",
+    "Statically generated for fast load times and strong SEO."
   ],
   "website": {
-    "url": "https://thekitchenstudio.gr",
+    "url": "https://www.thekitchenstudio.gr",
     "displayText": "thekitchenstudio.gr"
   }
 }
