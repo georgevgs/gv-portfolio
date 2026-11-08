@@ -1,23 +1,32 @@
 {
   "title": "Low and Flow",
-  "description": "An e-commerce store for a local bike shop, powered by WooCommerce with Redis caching and LiteSpeed, hosted on Hetzner.",
-  "tags": ["ecommerce", "woocommerce", "php", "redis"],
+  "description": "A bilingual (Greek and English) online store for a local bike shop, built on EmDash and Astro and running at the edge on Cloudflare Workers, with card payments via Alpha Bank and BOX NOW locker delivery.",
+  "tags": ["ecommerce", "astro", "emdash", "cloudflare"],
   "img": "/assets/low-and-flow.webp",
   "techStack": [
-    "WooCommerce",
-    "WordPress",
-    "PHP",
-    "MySQL",
-    "Redis",
-    "LiteSpeed",
-    "Hosted on Hetzner"
+    "Astro 7",
+    "EmDash CMS",
+    "React",
+    "TypeScript",
+    "Cloudflare Workers",
+    "Cloudflare D1",
+    "Cloudflare R2",
+    "Cloudflare Images",
+    "Cardlink (Alpha Bank)",
+    "BOX NOW",
+    "Cloudflare Turnstile",
+    "Bun"
   ],
   "features": [
-    "Full product catalog with categories and filtering.",
-    "Shopping cart with shipping and tax calculation.",
-    "Integrated payment gateway for online orders.",
-    "Customer account management and order history.",
-    "Admin panel for inventory and order management."
+    "Full product catalog with category tiles, brand pages and faceted filters.",
+    "Fast typo-tolerant search with accent and Greeklish matching and live suggestions.",
+    "Greek and English storefronts sharing the same catalog and slugs.",
+    "Product pages with a generic variant picker, gallery and specs.",
+    "Cart drawer and checkout with card, IRIS, bank transfer and pay on delivery.",
+    "BOX NOW locker map picker, courier and store pickup delivery options.",
+    "Wholesale accounts with application, approval and private pricing.",
+    "Custom admin for orders, stock, product editing and email notifications.",
+    "Edge-cached pages with on-the-fly image resizing for fast loads."
   ],
   "website": {
     "url": "https://lowandflow.gr",
