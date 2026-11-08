@@ -28,6 +28,26 @@
   background-position: top center;
 }
 
+/* Dromo's hero is a designed panel; the dark scrim would dim the phone */
+.project-hero--dromo {
+  background-position: right center;
+}
+
+/* Narrow screens: text would sit on top of the phone, so use plain ink */
+@media (max-width: 640px) {
+  .project-hero--dromo {
+    background-image: none !important;
+    background-color: #221e1b;
+  }
+}
+
+@media (min-width: 641px) {
+  .project-hero--dromo .project-hero-overlay {
+    background: none;
+  }
+  .project-hero--dromo .project-hero-content { max-width: 55%; }
+}
+
 @keyframes hero-in {
   from { opacity: 0; transform: translateY(22px) scale(0.96); }
   to   { opacity: 1; transform: translateY(0) scale(1); }

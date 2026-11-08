@@ -55,6 +55,24 @@ const works = [
       <span class="social-handle">georgevgs</span>
     </a>
 
+    <!-- Featured: Dromo -->
+    <a href="/work/dromo" class="cell cell-hover b-dromo">
+      <div class="dromo-body">
+        <div class="dromo-head">
+          <img src="/assets/svg/dromo-icon.svg" alt="" width="56" height="56" class="dromo-icon" decoding="async" />
+          <span class="dromo-badge">New · iOS app</span>
+        </div>
+        <h2 class="dromo-title">Dromo</h2>
+        <p class="dromo-desc">A running plan that fits your week. Adaptive 5K to marathon plans, sent to Apple Watch. No account — training stays on your iPhone.</p>
+        <div class="dromo-chips">
+          {["Swift 6", "SwiftUI", "WorkoutKit", "HealthKit"].map((t) => <span class="dromo-chip">{t}</span>)}
+        </div>
+      </div>
+      <div class="dromo-phone" aria-hidden="true">
+        <img src="/assets/dromo-phone.webp" alt="" width="560" height="1109" loading="lazy" decoding="async" />
+      </div>
+    </a>
+
     <!-- Work cells — full-bleed image with colored gradient overlay -->
     {works.map((w, i) => (
       <a

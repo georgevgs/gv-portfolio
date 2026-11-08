@@ -1,0 +1,31 @@
+{
+  "title": "Dromo",
+  "description": "An adaptive running planner for iPhone that sends structured workouts to Apple Watch. No account, no backend — your training stays on your device.",
+  "tags": ["ios", "swift", "swiftui", "healthkit"],
+  "img": "/assets/dromo.webp",
+  "techStack": [
+    "Swift 6",
+    "SwiftUI",
+    "WorkoutKit",
+    "HealthKit",
+    "WidgetKit",
+    "Swift Charts",
+    "App Intents",
+    "Swift Testing",
+    "On-device PlanEngine (Swift package)"
+  ],
+  "features": [
+    "Builds an adaptive plan for a 5K, 10K, half marathon, marathon, or running without a race — with training phases, recovery weeks, and capped weekly volume increases.",
+    "Estimates current fitness from race results and running history, with Apple cardio fitness as supporting evidence, and sets targets by pace, heart rate, or perceived effort.",
+    "Sends every structured session (warm-up, intervals, recovery) to Apple Watch through WorkoutKit — no separate Watch app to install.",
+    "Adapts future sessions as runs and check-ins arrive; illness and pain reporting steps the plan back and guides the return.",
+    "Beginner run/walk plans with stage check-ins, plus time-goal plans with feasibility checks and race-specific work.",
+    "Matches runs from Apple Health automatically with read-only access; Home Screen and Lock Screen widgets show upcoming training.",
+    "Private by design: no account, no server, no tracking. Training files are protected and kept out of automatic backups, with manual export and restore.",
+    "Fully localized in English and Greek, with a 600+ test suite covering the plan engine, Health, and Watch services."
+  ],
+  "website": {
+    "url": "https://dromo.run",
+    "displayText": "dromo.run"
+  }
+}
