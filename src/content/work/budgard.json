@@ -1,7 +1,13 @@
 {
   "title": "Budgard",
-  "description": "A calmer money app: a PWA that turns budgets, bills and daily spending into one answer, what is safe to spend today. Installs like a native app, syncs across devices, and has a free core with an optional Pro tier.",
-  "tags": ["react", "typescript", "pwa", "i18n", "supabase"],
+  "description": "A calmer money app that turns budgets, bills and daily spending into one answer: what is safe to spend today. A free, installable PWA.",
+  "tags": [
+    "react",
+    "typescript",
+    "pwa",
+    "i18n",
+    "supabase"
+  ],
   "img": "/assets/budgard.webp",
   "techStack": [
     "React 19",

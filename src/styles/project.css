@@ -24,8 +24,28 @@
   animation: hero-in 0.6s var(--ease-out) both;
 }
 
+/* Budgard's hero is a light, designed panel (three phones): ink text, fade on the left only */
 .project-hero--budgard {
-  background-position: top center;
+  background-color: #fff2e6;
+  background-size: auto 100%;
+  background-position: right -95px top;
+}
+
+.project-hero--budgard .project-hero-overlay {
+  background: linear-gradient(90deg, #fff2e6 0%, #fff2e6 44%, rgba(255,242,230,0) 60%);
+}
+
+.project-hero--budgard .project-hero-content { max-width: 52%; }
+.project-hero--budgard .project-title { color: #1a1410; }
+.project-hero--budgard .project-desc { color: rgba(26,20,16,0.72); }
+.project-hero--budgard .project-tag:nth-child(n) { background: rgba(255,121,0,0.14); color: #b34e00; }
+
+@media (max-width: 640px) {
+  .project-hero--budgard {
+    background-image: none !important;
+  }
+  .project-hero--budgard .project-hero-overlay { background: none; }
+  .project-hero--budgard .project-hero-content { max-width: none; }
 }
 
 /* Dromo's hero is a designed panel; the dark scrim would dim the phone */
