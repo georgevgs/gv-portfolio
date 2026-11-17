@@ -468,6 +468,7 @@
   transform: scale(1.06);
 }
 
+.b-w2 .work-bg,
 .b-w3 .work-bg {
   object-position: top center;
 }

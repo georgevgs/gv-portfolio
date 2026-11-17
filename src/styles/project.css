@@ -48,6 +48,10 @@
   .project-hero--budgard .project-hero-content { max-width: none; }
 }
 
+.project-hero--the-kitchen-studio {
+  background-position: top center;
+}
+
 /* Dromo's hero is a designed panel; the dark scrim would dim the phone */
 .project-hero--dromo {
   background-position: right center;
