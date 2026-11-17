@@ -1,29 +1,28 @@
 {
   "title": "The Kitchen Studio",
-  "description": "A bilingual website for a custom kitchen furniture studio in Glyfada, Greece. Statically generated with Astro 7 and Tailwind 4, with a dark mode, a bilingual blog and Cloudinary-hosted imagery, deployed on Vercel.",
+  "description": "A bilingual website for a custom kitchen furniture studio in Glyfada, Greece. Statically generated with Astro 7 and Tailwind 4, with a dark mode, a bilingual blog and optimized AVIF galleries, deployed on Vercel.",
   "tags": ["astro", "tailwind", "i18n", "vercel"],
   "img": "/assets/the-kitchen-studio.webp",
   "techStack": [
     "Astro 7",
     "Tailwind CSS 4",
     "TypeScript",
-    "MDX Blog",
-    "Embla Carousel",
-    "Cloudinary",
+    "Astro Assets (AVIF)",
+    "Markdown Blog",
     "Formspree",
     "Simple Analytics",
     "Deployed on Vercel"
   ],
   "features": [
     "Bilingual site: Greek (default) and English with i18n routing.",
-    "Full-screen hero carousel with autoplay and quick links to each product category.",
+    "Hero crossfade slider with autoplay, arrow controls and quick links to each product category.",
     "Product categories: kitchens, bathrooms, doors, wardrobes, tiles, and living.",
-    "Completed projects and design studies sections.",
-    "Light and dark mode toggle.",
-    "Blog with bilingual MDX articles.",
-    "Showroom and contact pages with a Formspree lead form.",
-    "Strict CSP headers and a subsetted icon font for fast loads.",
-    "Statically generated for fast load times and strong SEO."
+    "Completed projects, design studies and showroom galleries with a lightbox.",
+    "Light and dark mode toggle that follows the system setting.",
+    "Bilingual blog and a homepage FAQ.",
+    "Contact page with a Formspree lead form and free appointment booking.",
+    "Structured data, a hreflang sitemap and llms.txt for search and AI visibility.",
+    "Content Security Policy and security headers, inline SVG icons, no client framework."
   ],
   "website": {
     "url": "https://www.thekitchenstudio.gr",
